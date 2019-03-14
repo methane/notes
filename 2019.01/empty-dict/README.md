@@ -125,6 +125,12 @@ empty-dict2: ..................... 14.4 ns +- 0.1 ns
 
 Mean +- std dev: [before] 14.4 ns +- 0.1 ns -> [empty-dict2] 14.4 ns +- 0.1 ns: 1.00x faster (-0%)
 Not significant!
+
+$ compare -s 'def foo(x, **kw): pass' -- 'foo(4)'
+before: ..................... 83.6 ns +- 1.7 ns
+empty-dict2: ..................... 67.6 ns +- 1.8 ns
+
+Mean +- std dev: [before] 83.6 ns +- 1.7 ns -> [empty-dict2] 67.6 ns +- 1.8 ns: 1.24x faster (-19%)
 ```
 
 ### empty-dict2 vs empty-dict3
@@ -174,4 +180,10 @@ empty-dict2: ..................... 14.4 ns +- 0.2 ns
 empty-dict3: ..................... 10.6 ns +- 0.2 ns
 
 Mean +- std dev: [empty-dict2] 14.4 ns +- 0.2 ns -> [empty-dict3] 10.6 ns +- 0.2 ns: 1.36x faster (-26%)
+
+$ compare -s 'def foo(x, **kw): pass' -- 'foo(4)'
+empty-dict2: ..................... 68.7 ns +- 2.4 ns
+empty-dict3: ..................... 66.8 ns +- 1.1 ns
+
+Mean +- std dev: [empty-dict2] 68.7 ns +- 2.4 ns -> [empty-dict3] 66.8 ns +- 1.1 ns: 1.03x faster (-3%)
 ```
