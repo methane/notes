@@ -15,7 +15,7 @@ Mean +- std dev: 120 ns +- 2 ns
 ## performance
 
 master: 9d062d690b768252204992fc6ab7c3873a87442d
-opcache_load_global: 7f3fc85d375f294b61155035409fcdf6035d1d10
+opcache_load_global: 2057cd75510c79c83e916667f7a4a2a67f90e9ba
 
 ```
 $ ./cpython/python -m perf compare_to master.json opcache_load_global.json -G  --min-speed=2
