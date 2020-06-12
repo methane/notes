@@ -1,5 +1,7 @@
 # Survey for usage of PEP 393 deprecated APIs
 
+Result: See ./deprecated-use
+
 ## 1. Chosing top 4000 package.
 
 Get top 4000 packages from this site:
