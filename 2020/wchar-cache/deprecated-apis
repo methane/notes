@@ -1,0 +1,6 @@
+PyUnicode_FromUnicode
+PyUnicode_AsUnicode
+PyUnicode_TransformDecimalToASCII
+PyUnicode_AsUnicodeAndSize
+PyUnicode_AsUnicodeCopy
+PyUnicode_GetSize

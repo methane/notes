@@ -1,0 +1,48 @@
+# Survey for usage of PEP 393 deprecated APIs
+
+## 1. Chosing top 4000 package.
+
+Get top 4000 packages from this site:
+
+https://hugovk.github.io/top-pypi-packages/
+
+URL: https://hugovk.github.io/top-pypi-packages/top-pypi-packages-365-days.json
+
+file: ./top-pypi-packages-365-days.json
+
+
+## 2. Download sdist packages
+
+See this script: ./download_sdist.py
+
+* tar.gz: 3650
+* tar.bz2: 9
+* zip: 165
+
+Other packages provide universal wheel.  They won't use C-API.
+
+
+## 3. Searching deprecated APIs.
+
+A list of deprecated APIs: ./deprecated-apis
+
+Use ripgrep to search:
+
+```
+$ rg -zl -f deprecated-apis *.zip *.tar.gz *.bz2 > deprecated-files
+```
+
+
+## 4. Unacchive them
+
+Only tar.gz files are in deprecated-files.
+
+```
+$ cat deprecated-files | while read line; do tar xf $line; done
+```
+
+## 5. grepping deprecated APIs.
+
+```
+$ rg -w -f deprecated-apis ./* | grep -v __Pyx_PyUnicode > deprecated-use
+```
