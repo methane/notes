@@ -1,6 +1,6 @@
 # Survey for usage of PEP 393 deprecated APIs
 
-Result: See ./deprecated-use
+Result: See [deprecated-use](./deprecated-use)
 
 ## 1. Chosing top 4000 package.
 
@@ -15,7 +15,7 @@ file: ./top-pypi-packages-365-days.json
 
 ## 2. Download sdist packages
 
-See this script: ./download_sdist.py
+See this script: [download_sdist.py](./download_sdist.py)
 
 * tar.gz: 3650
 * tar.bz2: 9
@@ -26,7 +26,7 @@ Other packages provide universal wheel.  They won't use C-API.
 
 ## 3. Searching deprecated APIs.
 
-A list of deprecated APIs: ./deprecated-apis
+A list of deprecated APIs: [deprecated-apis](./deprecated-apis)
 
 Use ripgrep to search:
 
@@ -37,7 +37,7 @@ $ rg -zl -f deprecated-apis *.zip *.tar.gz *.bz2 > deprecated-files
 
 ## 4. Unacchive them
 
-Only tar.gz files are in deprecated-files.
+Only tar.gz files are in [deprecated-files](./deprecated-files).
 
 ```
 $ cat deprecated-files | while read line; do tar xf $line; done
