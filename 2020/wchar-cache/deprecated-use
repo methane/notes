@@ -1,9 +1,3 @@
-./deprecated-apis:PyUnicode_FromUnicode
-./deprecated-apis:PyUnicode_AsUnicode
-./deprecated-apis:PyUnicode_TransformDecimalToASCII
-./deprecated-apis:PyUnicode_AsUnicodeAndSize
-./deprecated-apis:PyUnicode_AsUnicodeCopy
-./deprecated-apis:PyUnicode_GetSize
 ./PyICU-2.5/bases.cpp:        return PyUnicode_FromUnicode(&c, 1);
 ./PyICU-2.5/charset.cpp:    return PyUnicode_FromUnicode(NULL, 0);
 ./PyICU-2.5/common.cpp:        return PyUnicode_FromUnicode((const Py_UNICODE *) utf16, len16);
