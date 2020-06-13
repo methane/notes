@@ -8,6 +8,7 @@
 ./Cython-0.29.20/Cython/Utility/StringTools.c:567:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
 ./Cython-0.29.20/Cython/Utility/StringTools.c:821:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
 ./Cython-0.29.20/Cython/Utility/StringTools.c:896:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./Cython-0.29.20/Cython/Utility/TypeConversion.c:594:            maxval = (long)PyUnicode_GetMax();
 ./Cython-0.29.20/docs/src/tutorial/strings.rst:698:of code units, call :c:func:`PyUnicode_GetSize` directly.
 ./DoubleMetaphone-0.1/doublemetaphone/dm.cpp:1173:        return PyUnicode_FromUnicode(NULL, 0);
 ./DoubleMetaphone-0.1/doublemetaphone/doublemetaphone.cpp:1173:        return PyUnicode_FromUnicode(NULL, 0);
@@ -22,7 +23,15 @@
 ./Fiona-1.8.13.post1/fiona/ogrext.c:34428:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
 ./Fiona-1.8.13.post1/fiona/ogrext.c:35304:        return PyUnicode_FromUnicode(NULL, 0);
 ./Genshi-0.7.3/genshi/_speedups.c:113:    out = (PyUnicodeObject*) PyUnicode_FromUnicode(NULL, len);
+./Genshi-0.7.3/genshi/_speedups.c:125:            Py_UNICODE_COPY(outp, inp, in->length - (inp - in->str));
+./Genshi-0.7.3/genshi/_speedups.c:130:                Py_UNICODE_COPY(outp, ((PyUnicodeObject *) amp2)->str, 5);
+./Genshi-0.7.3/genshi/_speedups.c:136:                    Py_UNICODE_COPY(outp, ((PyUnicodeObject *) qt2)->str, 5);
+./Genshi-0.7.3/genshi/_speedups.c:144:                Py_UNICODE_COPY(outp, ((PyUnicodeObject *) lt2)->str, 4);
+./Genshi-0.7.3/genshi/_speedups.c:149:                Py_UNICODE_COPY(outp, ((PyUnicodeObject *) gt2)->str, 4);
+./MarkupSafe-1.1.1/src/markupsafe/_speedups.c:104:		Py_UNICODE_COPY(outp, escaped_chars_repl[*next_escp], delta_len);
+./MarkupSafe-1.1.1/src/markupsafe/_speedups.c:110:		Py_UNICODE_COPY(outp, inp, PyUnicode_GET_SIZE(in) - (inp - PyUnicode_AS_UNICODE(in)));
 ./MarkupSafe-1.1.1/src/markupsafe/_speedups.c:79:	out = (PyUnicodeObject*)PyUnicode_FromUnicode(NULL, PyUnicode_GET_SIZE(in) + delta);
+./MarkupSafe-1.1.1/src/markupsafe/_speedups.c:99:			Py_UNICODE_COPY(outp, inp, next_escp-inp);
 ./PyBluez-0.23/msbt/_msbt.c:480:        item_tuple = PyUnicode_FromUnicode(
 ./PyICU-2.5/bases.cpp:2013:        return PyUnicode_FromUnicode(&c, 1);
 ./PyICU-2.5/charset.cpp:336:    return PyUnicode_FromUnicode(NULL, 0);
@@ -85,12 +94,20 @@
 ./dedupe-2.0.3/dedupe/cpredicates.c:2044:        return PyUnicode_FromUnicode(NULL, 0);
 ./dedupe-2.0.3/dedupe/cpredicates.c:2049:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
 ./dedupe-hcluster-0.3.8/hcluster/_hierarchy.c:31781:        return PyUnicode_FromUnicode(NULL, 0);
+./deprecated-apis:10:Py_UNICODE_AS_UNICODE
+./deprecated-apis:11:Py_UNICODE_AS_DATA
+./deprecated-apis:12:Py_UNICODE_MATCH
+./deprecated-apis:13:Py_UNICODE_COPY
+./deprecated-apis:14:Py_UNICODE_FILL
 ./deprecated-apis:1:PyUnicode_FromUnicode
 ./deprecated-apis:2:PyUnicode_AsUnicode
 ./deprecated-apis:3:PyUnicode_TransformDecimalToASCII
 ./deprecated-apis:4:PyUnicode_AsUnicodeAndSize
 ./deprecated-apis:5:PyUnicode_AsUnicodeCopy
 ./deprecated-apis:6:PyUnicode_GetSize
+./deprecated-apis:7:PyUnicode_GetMax
+./deprecated-apis:8:Py_UNICODE_GET_SIZE
+./deprecated-apis:9:Py_UNICODE_GET_DATA_SIZE
 ./fastdtw-0.3.4/fastdtw/_fastdtw.cpp:24065:        return PyUnicode_FromUnicode(NULL, 0);
 ./fuzzyset-0.0.19/fuzzyset/cfuzzyset.c:8026:        return PyUnicode_FromUnicode(NULL, 0);
 ./fuzzyset-0.0.19/fuzzyset/cfuzzyset.c:8031:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
@@ -213,7 +230,10 @@
 ./netifaces-0.10.9/netifaces.c:1567:	ifname = PyUnicode_FromUnicode (pwcsName, wcslen (pwcsName));
 ./netifaces-0.10.9/netifaces.c:1674:      ifname = PyUnicode_FromUnicode (pwcsName, wcslen (pwcsName));
 ./orderedset-2.0.3/lib/orderedset/_orderedset.c:14675:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./pipenv-2020.6.2/pipenv/vendor/markupsafe/_speedups.c:104:		Py_UNICODE_COPY(outp, escaped_chars_repl[*next_escp], delta_len);
+./pipenv-2020.6.2/pipenv/vendor/markupsafe/_speedups.c:110:		Py_UNICODE_COPY(outp, inp, PyUnicode_GET_SIZE(in) - (inp - PyUnicode_AS_UNICODE(in)));
 ./pipenv-2020.6.2/pipenv/vendor/markupsafe/_speedups.c:79:	out = (PyUnicodeObject*)PyUnicode_FromUnicode(NULL, PyUnicode_GET_SIZE(in) + delta);
+./pipenv-2020.6.2/pipenv/vendor/markupsafe/_speedups.c:99:			Py_UNICODE_COPY(outp, inp, next_escp-inp);
 ./pmdarima-1.6.1/pmdarima/arima/_arima.c:30114:        return PyUnicode_FromUnicode(NULL, 0);
 ./pmdarima-1.6.1/pmdarima/preprocessing/exog/_fourier.c:21202:        return PyUnicode_FromUnicode(NULL, 0);
 ./pmdarima-1.6.1/pmdarima/utils/_array.c:23356:        return PyUnicode_FromUnicode(NULL, 0);
