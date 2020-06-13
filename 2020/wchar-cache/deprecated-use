@@ -1,529 +1,535 @@
-./PyICU-2.5/bases.cpp:        return PyUnicode_FromUnicode(&c, 1);
-./PyICU-2.5/charset.cpp:    return PyUnicode_FromUnicode(NULL, 0);
-./PyICU-2.5/common.cpp:        return PyUnicode_FromUnicode((const Py_UNICODE *) utf16, len16);
-./PyICU-2.5/common.cpp:        PyObject *u = PyUnicode_FromUnicode(NULL, len32);
-./PyICU-2.5/common.cpp:                  Py_UNICODE *pchars = PyUnicode_AsUnicodeAndSize(object, &len);
-./PyICU-2.5/common.cpp:                  Py_UNICODE *pchars = PyUnicode_AsUnicodeAndSize(object, &len);
-./ibm_db-3.0.1/ibm_db.c:                    PyUnicode_GetSize(databaseObj),
-./ibm_db-3.0.1/ibm_db.c:                    PyUnicode_GetSize(uidObj),
-./ibm_db-3.0.1/ibm_db.c:                    PyUnicode_GetSize(passwordObj));
-./ibm_db-3.0.1/ibm_db.c:        return PyUnicode_FromUnicode((Py_UNICODE *)sqlwcharData, sqlwcharBytesLen / sizeof(SQLWCHAR));
-./ibm_db-3.0.1/ibm_db.c:                stmt_size = PyUnicode_GetSize(py_stmt);
-./ibm_db-3.0.1/ibm_db.c:                    curr->ivalue = PyUnicode_GetSize(bind_data);
-./javabridge-1.0.19/_javabridge.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./javabridge-1.0.19/_javabridge.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./javabridge-1.0.19/_javabridge.c:        return PyUnicode_FromUnicode(NULL, 0);
-./jq-1.0.1/jq.c:        return PyUnicode_FromUnicode(NULL, 0);
-./netifaces-0.10.9/netifaces.c:    return PyUnicode_FromUnicode(&uc, 0);
-./netifaces-0.10.9/netifaces.c:	ifname = PyUnicode_FromUnicode (pwcsName, wcslen (pwcsName));
-./netifaces-0.10.9/netifaces.c:      ifname = PyUnicode_FromUnicode (pwcsName, wcslen (pwcsName));
-./pyahocorasick-1.4.0/AutomatonItemsIter.c:                    return PyUnicode_FromUnicode((Py_UNICODE*)(iter->buffer + 1), depth);
-./rcssmin-1.0.6/rcssmin.c:#define PyString_FromStringAndSize PyUnicode_FromUnicode
-./rjsmin-1.1.0/rjsmin.c:#define PyString_FromStringAndSize PyUnicode_FromUnicode
-./rjsmin-1.1.0/cext.h:    (PyUnicode_FromUnicode((Py_UNICODE *)data, length))
-./rjsmin-1.1.0/cext.h:#define PyUnicode_New(size, maxchar) PyUnicode_FromUnicode(NULL, size)
-./pyjq-2.4.0/_pyjq.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scandir-1.10.0/_scandir.c:#define PyUnicode_AsUnicodeAndSize(unicode, addr_length) \
-./scandir-1.10.0/_scandir.c:    PyUnicode_AsUnicode(unicode); *(addr_length) = PyUnicode_GetSize(unicode)
-./scandir-1.10.0/_scandir.c:        wide = PyUnicode_AsUnicodeAndSize(unicode, &length);
-./scandir-1.10.0/_scandir.c:    path = PyUnicode_AsUnicode(self->path);
-./scandir-1.10.0/_scandir.c:        path = PyUnicode_AsUnicode(self->path);
-./scandir-1.10.0/_scandir.c:                                    PyUnicode_GetSize(self->name), "strict");
-./scandir-1.10.0/_scandir.c:                                    PyUnicode_GetSize(self->path), "strict");
-./DoubleMetaphone-0.1/doublemetaphone/doublemetaphone.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./DoubleMetaphone-0.1/doublemetaphone/dm.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./Fiona-1.8.13.post1/fiona/_err.c:        return PyUnicode_FromUnicode(NULL, 0);
-./Fiona-1.8.13.post1/fiona/_shim.c:        return PyUnicode_FromUnicode(NULL, 0);
-./Fiona-1.8.13.post1/fiona/_transform.cpp:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./Fiona-1.8.13.post1/fiona/_shim22.c:        return PyUnicode_FromUnicode(NULL, 0);
-./Fiona-1.8.13.post1/fiona/_shim1.c:        return PyUnicode_FromUnicode(NULL, 0);
-./Fiona-1.8.13.post1/fiona/_crs.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./Fiona-1.8.13.post1/fiona/ogrext.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./Fiona-1.8.13.post1/fiona/ogrext.c:        return PyUnicode_FromUnicode(NULL, 0);
-./Fiona-1.8.13.post1/fiona/_shim3.c:        return PyUnicode_FromUnicode(NULL, 0);
-./Fiona-1.8.13.post1/fiona/_shim2.c:        return PyUnicode_FromUnicode(NULL, 0);
-./Genshi-0.7.3/genshi/_speedups.c:    out = (PyUnicodeObject*) PyUnicode_FromUnicode(NULL, len);
-./PyBluez-0.23/msbt/_msbt.c:        item_tuple = PyUnicode_FromUnicode(
-./PyQt5-5.15.0/designer/pluginloader.cpp:    PyObject *dobj = PyUnicode_FromUnicode(0, ucs4.size());
-./PyQt5-5.15.0/designer/pluginloader.cpp:    PyObject *dobj = PyUnicode_FromUnicode(0, native_dir.length());
-./PyQt5-5.15.0/qmlscene/pluginloader.cpp:    PyObject *plugin_dir_obj = PyUnicode_FromUnicode(0, ucs4.size());
-./PyQt5-5.15.0/qmlscene/pluginloader.cpp:    PyObject *plugin_dir_obj = PyUnicode_FromUnicode(0,
-./aiohttp-3.6.2/aiohttp/_http_parser.c:        return PyUnicode_FromUnicode(NULL, 0);
-./aiohttp-3.6.2/aiohttp/_http_parser.c:        return PyUnicode_FromUnicode(NULL, 0);
-./apsw-3.9.2-r1/src/apsw.c:      unires=PyUnicode_FromUnicode(NULL, PyUnicode_GET_SIZE(value)+2);
-./apsw-3.9.2-r1/src/apsw.c:			unires=PyUnicode_FromUnicode(NULL, buflen*2+3),
-./apsw-3.9.2-r1/src/pyutil.c:          PyObject *res=PyUnicode_FromUnicode(NULL, size);
-./blis-0.4.1/blis/cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./blis-0.4.1/blis/py.c:        return PyUnicode_FromUnicode(NULL, 0);
-./cffi-1.14.0/c/wchar_helper.h:    unicode = PyUnicode_FromUnicode(NULL, alloc);
-./cffi-1.14.0/c/wchar_helper.h:    return PyUnicode_FromUnicode((const Py_UNICODE *)w, size);
-./cffi-1.14.0/c/wchar_helper.h:    return PyUnicode_FromUnicode((const Py_UNICODE *)w, size);
-./cffi-1.14.0/c/wchar_helper.h:    PyObject *result = PyUnicode_FromUnicode(NULL, size);
-./cffi-1.14.0/c/_cffi_backend.c:#  define PyText_GetSize PyUnicode_GetSize
-./clickhouse-driver-0.1.3/clickhouse_driver/bufferedreader.c:        return PyUnicode_FromUnicode(NULL, 0);
-./cx_Freeze-6.1/source/util.c:        return PyUnicode_FromUnicode(dir, wcslen(dir));
-./cx_Freeze-6.1/source/util.c:        return PyUnicode_FromUnicode(dir, wcslen(dir));
-./couchbase-3.0.0/src/ext.c:        *length = PyUnicode_GetSize(object);
-./dedupe-2.0.3/dedupe/cpredicates.c:        return PyUnicode_FromUnicode(NULL, 0);
-./dedupe-2.0.3/dedupe/cpredicates.c:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
-./dedupe-hcluster-0.3.8/hcluster/_hierarchy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./fastdtw-0.3.4/fastdtw/_fastdtw.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./fuzzyset-0.0.19/fuzzyset/cfuzzyset.c:        return PyUnicode_FromUnicode(NULL, 0);
-./fuzzyset-0.0.19/fuzzyset/cfuzzyset.c:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
-./gensim-3.8.3/gensim/_matutils.c:        return PyUnicode_FromUnicode(NULL, 0);
-./hdbscan-0.8.26/hdbscan/kd_tree.c:        return PyUnicode_FromUnicode(NULL, 0);
-./hdbscan-0.8.26/hdbscan/ball_tree.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_blosc.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_blosc.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./imagecodecs-2020.5.30/imagecodecs/_lz4.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./imagecodecs-2020.5.30/imagecodecs/_lz4.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_lerc.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_lerc.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_jpeg8.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_aec.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_aec.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_zstd.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_zstd.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_zstd.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./imagecodecs-2020.5.30/imagecodecs/_bz2.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_bz2.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_snappy.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_snappy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_jpegxr.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_jpegxr.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./imagecodecs-2020.5.30/imagecodecs/_jpegxr.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_brotli.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_brotli.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_zlib.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_zlib.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_lzf.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./imagecodecs-2020.5.30/imagecodecs/_lzf.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_lzf.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_png.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_png.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./imagecodecs-2020.5.30/imagecodecs/_jpegls.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_jpegls.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_zfp.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_bitshuffle.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_bitshuffle.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_webp.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_webp.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_lzma.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_lzma.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_jpegsof3.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_shared.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_shared.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_zopfli.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_jpegxl.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_jpegxl.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_gif.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_gif.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_gif.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./imagecodecs-2020.5.30/imagecodecs/_jpeg2k.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_jpeg2k.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./imagecodecs-2020.5.30/imagecodecs/_jpeg12.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_imcd.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_imcd.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_imcd.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./implicit-0.4.2/implicit/evaluation.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_tiff.c:        return PyUnicode_FromUnicode(NULL, 0);
-./imagecodecs-2020.5.30/imagecodecs/_tiff.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./imagecodecs-2020.5.30/imagecodecs/_tiff.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./implicit-0.4.2/implicit/recommender_base.cpp:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./implicit-0.4.2/implicit/recommender_base.cpp:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./implicit-0.4.2/implicit/recommender_base.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./implicit-0.4.2/implicit/lmf.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./implicit-0.4.2/implicit/_nearest_neighbours.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./implicit-0.4.2/implicit/bpr.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./implicit-0.4.2/implicit/_als.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./lightfm-1.15/lightfm/_lightfm_fast_openmp.c:        return PyUnicode_FromUnicode(NULL, 0);
-./lightfm-1.15/lightfm/_lightfm_fast_no_openmp.c:        return PyUnicode_FromUnicode(NULL, 0);
-./lupa-1.9/lupa/_lupa.c:        return PyUnicode_FromUnicode(NULL, 0);
-./lupa-1.9/lupa/_lupa.c:        return PyUnicode_FromUnicode(NULL, 0);
-./marisa-trie-0.7.5/src/marisa_trie.cpp:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./marisa-trie-0.7.5/src/marisa_trie.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./marisa-trie-0.7.5/src/marisa_trie.cpp:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
-./marisa-trie-0.7.5/src/marisa_trie.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./matplotlib-3.2.1/src/ft2font_wrapper.cpp:        Py_UNICODE *unistr = PyUnicode_AsUnicode(textobj);
-./msgpack-1.0.0/msgpack/_cmsgpack.cpp:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./mujoco-py-2.0.2.10/mujoco_py/cymj.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./mujoco-py-2.0.2.10/mujoco_py/cymj.c:        return PyUnicode_FromUnicode(NULL, 0);
-./pomegranate-0.13.3/pomegranate/BayesianNetwork.c:        return PyUnicode_FromUnicode(NULL, 0);
-./pomegranate-0.13.3/pomegranate/hmm.c:        return PyUnicode_FromUnicode(NULL, 0);
-./pomegranate-0.13.3/pomegranate/MarkovNetwork.c:        return PyUnicode_FromUnicode(NULL, 0);
-./pygame-1.9.6/src_c/math.c:    attr = PyUnicode_AsUnicode(attr_unicode);
-./pygame-1.9.6/src_c/math.c:    attr = PyUnicode_AsUnicode(attr_unicode);
-./pyhacrf-datamade-0.2.5/pyhacrf/adjacent.c:        return PyUnicode_FromUnicode(NULL, 0);
-./pygame-1.9.6/src_c/pgcompat.h:#define Text_GetSize PyUnicode_GetSize
-./pyhacrf-datamade-0.2.5/pyhacrf/algorithms.c:        return PyUnicode_FromUnicode(NULL, 0);
-./pyodbc-4.0.30/src/pyodbcmodule.cpp:    return PyUnicode_FromUnicode(&chDecimal, 1);
-./pyodbc-4.0.30/src/pyodbcmodule.cpp:    PyObject* result = PyUnicode_FromUnicode(0, length);
-./pyodbc-4.0.30/src/errors.cpp:    if (!msg || PyUnicode_GetSize(msg.Get()) == 0)
-./pyodbc-4.0.30/src/pyodbccompat.h:    return PyUnicode_FromUnicode(0, length);
-./pyproj-2.6.1.post1/pyproj/_geod.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./pysam-0.16.0/pysam/libcutils.c:        return PyUnicode_FromUnicode(NULL, 0);
-./pystan-2.19.1.1/pystan/_api.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./pystan-2.19.1.1/pystan/_chains.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./pystan-2.19.1.1/pystan/_misc.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./pysam-0.16.0/pysam/libcalignedsegment.c:        return PyUnicode_FromUnicode(NULL, 0);
-./python-Levenshtein-0.12.0/Levenshtein/_levenshtein.c:      result = PyUnicode_FromUnicode(medstr, len);
-./python-Levenshtein-0.12.0/Levenshtein/_levenshtein.c:      result = PyUnicode_FromUnicode(medstr, len);
-./python-Levenshtein-0.12.0/Levenshtein/_levenshtein.c:      result = PyUnicode_FromUnicode(s, len);
-./python-Levenshtein-0.12.0/Levenshtein/_levenshtein.c:      result = PyUnicode_FromUnicode(s, len);
-./python-crfsuite-0.9.7/pycrfsuite/_pycrfsuite.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./pyxDamerauLevenshtein-1.6/pyxdameraulevenshtein/pyxdameraulevenshtein.c:        return PyUnicode_FromUnicode(NULL, 0);
-./rasterio-1.1.5/rasterio/_err.c:        return PyUnicode_FromUnicode(NULL, 0);
-./rasterio-1.1.5/rasterio/_shim21.c:        return PyUnicode_FromUnicode(NULL, 0);
-./rasterio-1.1.5/rasterio/_shim30.c:        return PyUnicode_FromUnicode(NULL, 0);
-./rasterio-1.1.5/rasterio/_shim1.c:        return PyUnicode_FromUnicode(NULL, 0);
-./rasterio-1.1.5/rasterio/_env.c:        return PyUnicode_FromUnicode(NULL, 0);
-./rasterio-1.1.5/rasterio/_crs.c:        return PyUnicode_FromUnicode(NULL, 0);
-./rasterio-1.1.5/rasterio/_shim20.c:        return PyUnicode_FromUnicode(NULL, 0);
-./rasterio-1.1.5/rasterio/_example.c:        return PyUnicode_FromUnicode(NULL, 0);
-./rasterio-1.1.5/rasterio/_warp.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./rasterio-1.1.5/rasterio/_base.c:        return PyUnicode_FromUnicode(NULL, 0);
-./rasterio-1.1.5/rasterio/_io.c:        return PyUnicode_FromUnicode(NULL, 0);
-./regex-2020.6.8/regex_3/_regex.c:    result = PyUnicode_FromUnicode(codepoints, len);
-./regex-2020.6.8/regex_3/_regex.c:    return PyUnicode_FromUnicode(buffer, len);
-./regex-2020.6.8/regex_3/_regex.c:    buffer = PyUnicode_AsUnicode(string);
-./regex-2020.6.8/regex_3/_regex.c:    return PyUnicode_FromUnicode(buffer + start, end - start);
-./regex-2020.6.8/regex_3/_regex.c:            joiner = PyUnicode_FromUnicode(NULL, 0);
-./regex-2020.6.8/regex_3/_regex.c:        return PyUnicode_FromUnicode(NULL, 0);
-./regex-2020.6.8/regex_2/_regex.c:    result = PyUnicode_FromUnicode(codepoints, len);
-./regex-2020.6.8/regex_2/_regex.c:    return PyUnicode_FromUnicode(buffer, len);
-./regex-2020.6.8/regex_2/_regex.c:    buffer = PyUnicode_AsUnicode(string);
-./regex-2020.6.8/regex_2/_regex.c:    return PyUnicode_FromUnicode(buffer + start, end - start);
-./regex-2020.6.8/regex_2/_regex.c:            joiner = PyUnicode_FromUnicode(NULL, 0);
-./regex-2020.6.8/regex_2/_regex.c:        return PyUnicode_FromUnicode(NULL, 0);
-./simplejson-3.17.0/simplejson/_speedups.c:            chunk = PyUnicode_FromUnicode(&((const Py_UNICODE *)buf)[end], next - end);
-./simplejson-3.17.0/simplejson/_speedups.c:    numstr = PyUnicode_FromUnicode(&((Py_UNICODE *)str)[start], idx - start);
-./simplejson-3.17.0/simplejson/_speedups.c:    JSON_EmptyUnicode = PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/strings.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/morphology.cpp:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./spacy-2.2.4/spacy/tokenizer.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/tokenizer.cpp:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
-./spacy-2.2.4/spacy/tokenizer.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/lexeme.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/vocab.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/gold.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./tables-3.6.1/tables/utilsextension.c:        return PyUnicode_FromUnicode(NULL, 0);
-./tables-3.6.1/tables/utilsextension.c:        return PyUnicode_FromUnicode(NULL, 0);
-./wordcloud-1.7.0/wordcloud/query_integral_image.c:        return PyUnicode_FromUnicode(NULL, 0);
-./weighted_levenshtein-0.2.1/weighted_levenshtein/clev.c:        return PyUnicode_FromUnicode(NULL, 0);
-./uamqp-1.2.8/uamqp/c_uamqp.c:        return PyUnicode_FromUnicode(NULL, 0);
-./uvloop-0.14.0/uvloop/loop.c:        return PyUnicode_FromUnicode(NULL, 0);
-./uvloop-0.14.0/uvloop/loop.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./uvloop-0.14.0/uvloop/loop.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./uvloop-0.14.0/uvloop/loop.c:        return PyUnicode_FromUnicode(NULL, 0);
-./yarl-1.4.2/yarl/_quoting.c:        return PyUnicode_FromUnicode(NULL, 0);
-./yarl-1.4.2/yarl/_quoting.c:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
-./yarl-1.4.2/yarl/_quoting.c:        return PyUnicode_FromUnicode(NULL, 0);
-./Cython-0.29.20/Cython/Compiler/ExprNodes.py:                    "%s = PyUnicode_FromUnicode(%s, (sizeof(%s) / sizeof(Py_UNICODE))-1); %s" % (
-./Cython-0.29.20/Cython/Utility/StringTools.c:        return PyUnicode_FromUnicode(NULL, 0);
-./Cython-0.29.20/Cython/Utility/StringTools.c:        return PyUnicode_FromUnicode(NULL, 0);
-./Cython-0.29.20/Cython/Utility/StringTools.c:        return PyUnicode_FromUnicode(NULL, 0);
-./Cython-0.29.20/Cython/Utility/StringTools.c:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
-./Cython-0.29.20/Cython/Utility/StringTools.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./Cython-0.29.20/Cython/Utility/StringTools.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./MarkupSafe-1.1.1/src/markupsafe/_speedups.c:	out = (PyUnicodeObject*)PyUnicode_FromUnicode(NULL, PyUnicode_GET_SIZE(in) + delta);
-./PyQt5-5.15.0/qpy/QtCore/qpycore_qstring.cpp:    if ((obj = PyUnicode_FromUnicode(NULL, ucs4.size())) == NULL)
-./PyQt5-5.15.0/qpy/QtCore/qpycore_qstring.cpp:    if ((obj = PyUnicode_FromUnicode(NULL, qstr.length())) == NULL)
-./PyWavelets-1.1.1/pywt/_extensions/_dwt.c:        return PyUnicode_FromUnicode(NULL, 0);
-./PyWavelets-1.1.1/pywt/_extensions/_swt.c:        return PyUnicode_FromUnicode(NULL, 0);
-./PyWavelets-1.1.1/pywt/_extensions/_cwt.c:        return PyUnicode_FromUnicode(NULL, 0);
-./Shapely-1.7.0/shapely/vectorized/_vectorized.c:        return PyUnicode_FromUnicode(NULL, 0);
-./PyWavelets-1.1.1/pywt/_extensions/_pywt.c:        return PyUnicode_FromUnicode(NULL, 0);
-./astropy-4.0.1.post1/astropy/stats/_stats.c:        return PyUnicode_FromUnicode(NULL, 0);
-./av-8.0.2/src/av/error.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./av-8.0.2/src/av/error.c:        return PyUnicode_FromUnicode(NULL, 0);
-./asyncpg-0.20.1/asyncpg/pgproto/pgproto.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./asyncpg-0.20.1/asyncpg/pgproto/pgproto.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./asyncpg-0.20.1/asyncpg/pgproto/pgproto.c:        return PyUnicode_FromUnicode(NULL, 0);
-./asyncpg-0.20.1/asyncpg/protocol/protocol.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./asyncpg-0.20.1/asyncpg/protocol/protocol.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./asyncpg-0.20.1/asyncpg/protocol/protocol.c:        return PyUnicode_FromUnicode(NULL, 0);
-./clickhouse-driver-0.1.3/clickhouse_driver/columns/stringcolumn.c:        return PyUnicode_FromUnicode(NULL, 0);
-./gensim-3.8.3/gensim/models/_utils_any2vec.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./gensim-3.8.3/gensim/models/_utils_any2vec.c:        return PyUnicode_FromUnicode(NULL, 0);
-./gensim-3.8.3/gensim/models/_utils_any2vec.c:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
-./gensim-3.8.3/gensim/models/nmf_pgd.c:        return PyUnicode_FromUnicode(NULL, 0);
-./grapheme-0.6.0/grapheme/cython/api.c:  __pyx_ustring__20 = PyUnicode_FromUnicode(__pyx_k__21, (sizeof(__pyx_k__21) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__20)) __PYX_ERR(0, 1, __pyx_L1_error)
-./grapheme-0.6.0/grapheme/cython/api.c:  __pyx_ustring__22 = PyUnicode_FromUnicode(__pyx_k__23, (sizeof(__pyx_k__23) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__22)) __PYX_ERR(0, 1, __pyx_L1_error)
-./grapheme-0.6.0/grapheme/cython/api.c:  __pyx_ustring__24 = PyUnicode_FromUnicode(__pyx_k__25, (sizeof(__pyx_k__25) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__24)) __PYX_ERR(0, 1, __pyx_L1_error)
-./grapheme-0.6.0/grapheme/cython/api.c:  __pyx_ustring__26 = PyUnicode_FromUnicode(__pyx_k__27, (sizeof(__pyx_k__27) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__26)) __PYX_ERR(0, 1, __pyx_L1_error)
-./grapheme-0.6.0/grapheme/cython/api.c:  __pyx_ustring__28 = PyUnicode_FromUnicode(__pyx_k__29, (sizeof(__pyx_k__29) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__28)) __PYX_ERR(0, 1, __pyx_L1_error)
-./grapheme-0.6.0/grapheme/cython/finder.c:        return PyUnicode_FromUnicode(NULL, 0);
-./grapheme-0.6.0/grapheme/cython/finder.c:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
-./httptools-0.1.1/httptools/parser/parser.c:        return PyUnicode_FromUnicode(NULL, 0);
-./implicit-0.4.2/implicit/cuda/_cuda.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./lxml-4.5.1/src/lxml/objectify.c:        return PyUnicode_FromUnicode(NULL, 0);
-./lxml-4.5.1/src/lxml/objectify.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./lxml-4.5.1/src/lxml/objectify.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./lxml-4.5.1/src/lxml/etree.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./lxml-4.5.1/src/lxml/etree.c:        return PyUnicode_FromUnicode(NULL, 0);
-./lxml-4.5.1/src/lxml/etree.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./lxml-4.5.1/src/lxml/etree.c:        return PyUnicode_FromUnicode(NULL, 0);
-./mysql-connector-python-8.0.20/src/mysqlxpb/python.h:#define PyString_Size PyUnicode_GetSize
-./mypy-0.780/mypyc/lib-rt/getargs.c:                *p = PyUnicode_AsUnicodeAndSize(arg, &len);
-./mypy-0.780/mypyc/lib-rt/getargs.c:                *p = PyUnicode_AsUnicodeAndSize(arg, &len);
-./orderedset-2.0.3/lib/orderedset/_orderedset.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./pmdarima-1.6.1/pmdarima/utils/_array.c:        return PyUnicode_FromUnicode(NULL, 0);
-./pmdarima-1.6.1/pmdarima/arima/_arima.c:        return PyUnicode_FromUnicode(NULL, 0);
-./pomegranate-0.13.3/pomegranate/distributions/JointProbabilityTable.c:        return PyUnicode_FromUnicode(NULL, 0);
-./pomegranate-0.13.3/pomegranate/distributions/ConditionalProbabilityTable.c:        return PyUnicode_FromUnicode(NULL, 0);
-./pyScss-1.3.7/scss/src/block_locator.c:		self->codestr_sz = PyUnicode_GetSize((PyObject*)codestr);
-./pygame-1.9.6/src_c/_sdl2/sdl2.c:        return PyUnicode_FromUnicode(NULL, 0);
-./pygame-1.9.6/src_c/_sdl2/video.c:        return PyUnicode_FromUnicode(NULL, 0);
-./pygame-1.9.6/src_c/_sdl2/audio.c:        return PyUnicode_FromUnicode(NULL, 0);
-./pyobjc-core-6.2/Modules/objc/struct-wrapper.m:            v = PyUnicode_FromUnicode(&ch, 1);
-./pyobjc-core-6.2/Modules/objc/objc_support.m:        if (PyUnicode_Check(argument) && PyUnicode_GetSize(argument) == 1) {
-./pyobjc-core-6.2/Modules/objc/objc_support.m:            *(int*)datum = (int)(*PyUnicode_AsUnicode(argument));
-./pythonnet-2.4.0/src/runtime/pystring.cs:    /// 2011-01-29: ...Then why does the string constructor call PyUnicode_FromUnicode()???
-./pythonnet-2.4.0/src/runtime/pystring.cs:            obj = Runtime.PyUnicode_FromUnicode(s, s.Length);
-./pythonnet-2.4.0/src/runtime/runtime.cs:        internal static IntPtr PyUnicode_FromUnicode(string s, long size)
-./pythonnet-2.4.0/src/runtime/runtime.cs:        internal static long PyUnicode_GetSize(IntPtr ob)
-./pythonnet-2.4.0/src/runtime/runtime.cs:        [DllImport(_PythonDll, CallingConvention = CallingConvention.Cdecl, EntryPoint = "PyUnicode_GetSize")]
-./pythonnet-2.4.0/src/runtime/runtime.cs:        internal static extern IntPtr PyUnicode_AsUnicode(IntPtr ob);
-./pythonnet-2.4.0/src/runtime/runtime.cs:        internal static IntPtr PyUnicode_FromUnicode(string s, long size)
-./pythonnet-2.4.0/src/runtime/runtime.cs:            return PyUnicode_FromUnicode(s, new IntPtr(size));
-./pythonnet-2.4.0/src/runtime/runtime.cs:        private static extern IntPtr PyUnicode_FromUnicode(
-./pythonnet-2.4.0/src/runtime/runtime.cs:        internal static long PyUnicode_GetSize(IntPtr ob)
-./pythonnet-2.4.0/src/runtime/runtime.cs:        internal static extern IntPtr PyUnicode_AsUnicode(IntPtr ob);
-./pythonnet-2.4.0/src/runtime/runtime.cs:            return PyUnicode_FromUnicode(s, s.Length);
-./pythonnet-2.4.0/src/runtime/runtime.cs:                IntPtr p = PyUnicode_AsUnicode(op);
-./pythonnet-2.4.0/src/runtime/runtime.cs:                int length = (int)PyUnicode_GetSize(op);
-./pythonnet-2.4.0/src/runtime/converter.cs:                        if (Runtime.PyUnicode_GetSize(value) == 1)
-./pythonnet-2.4.0/src/runtime/converter.cs:                            op = Runtime.PyUnicode_AsUnicode(value);
-./scikit-image-0.17.2/skimage/restoration/_unwrap_1d.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/restoration/_unwrap_2d.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/restoration/_nl_means_denoising.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/transform/_seam_carving.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/transform/_radon_transform.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/restoration/_unwrap_3d.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/morphology/_convex_hull.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/morphology/_watershed.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/restoration/_denoise_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/filters/_multiotsu.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/measure/_marching_cubes_classic_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/filters/_ctmf.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/transform/_hough_transform.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/measure/_moments_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/measure/_marching_cubes_lewiner_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/transform/_warps_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/morphology/_skeletonize_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/measure/_find_contours_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/graph/old_heap.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/graph/old_heap.c:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
-./scikit-image-0.17.2/skimage/morphology/_flood_fill_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/morphology/_skeletonize_3d_cy.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/graph/heap.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/graph/heap.c:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
-./scikit-image-0.17.2/skimage/measure/_ccomp.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./scikit-image-0.17.2/skimage/morphology/_max_tree.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/morphology/_extrema_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/util/_remap.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/graph/save_heap.c:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
-./scikit-image-0.17.2/skimage/measure/_pnpoly.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/graph/_spath.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/_shared/transform.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/graph/_mcp.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/feature/_hoghistogram.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/feature/_hessian_det_appx.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/segmentation/_slic.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/feature/corner_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/draw/_draw.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/feature/brief_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/segmentation/_quickshift_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/segmentation/_watershed_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/feature/censure_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/feature/_haar.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/segmentation/_remap.cpp:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./scikit-image-0.17.2/skimage/segmentation/_remap.cpp:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./scikit-image-0.17.2/skimage/feature/_cascade.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/feature/_texture.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/feature/orb_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/spatial/_voronoi.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/spatial/_hausdorff.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/_lib/_ccallback_c.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/_lib/messagestream.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/spatial/ckdtree.cxx:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./scipy-1.4.1/scipy/spatial/ckdtree.cxx:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/optimize/_group_columns.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/special/_test_round.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/spatial/qhull.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./scipy-1.4.1/scipy/spatial/qhull.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./scipy-1.4.1/scipy/spatial/qhull.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/linalg/cython_blas.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/sparse/_csparsetools.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./scipy-1.4.1/scipy/sparse/_csparsetools.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/fftpack/convolve.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/linalg/_decomp_update.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./scipy-1.4.1/scipy/optimize/_bglu_dense.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/linalg/_solve_toeplitz.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/signal/_peak_finding_utils.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/interpolate/_ppoly.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./scipy-1.4.1/scipy/interpolate/_ppoly.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./scipy-1.4.1/scipy/interpolate/_ppoly.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/interpolate/_bspl.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/stats/_stats.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/signal/_max_len_seq_inner.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/interpolate/interpnd.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/signal/_sosfilt.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/signal/_upfirdn_apply.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/cluster/_optimal_leaf_ordering.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/cluster/_hierarchy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/syntax/stateclass.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/syntax/transition_system.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/syntax/nonproj.cpp:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./spacy-2.2.4/spacy/syntax/nonproj.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/syntax/arc_eager.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/syntax/_beam_utils.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/syntax/_parser_model.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/syntax/nn_parser.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/pipeline/morphologizer.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/tokens/_retokenize.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/tokens/_retokenize.cpp:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
-./spacy-2.2.4/spacy/tokens/_retokenize.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/tokens/span.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/tokens/token.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/tokens/doc.cpp:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./spacy-2.2.4/spacy/tokens/doc.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/matcher/phrasematcher.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/matcher/dependencymatcher.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__374 = PyUnicode_FromUnicode(__pyx_k__375, (sizeof(__pyx_k__375) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__374)) __PYX_ERR(0, 1443, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__376 = PyUnicode_FromUnicode(__pyx_k__377, (sizeof(__pyx_k__377) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__376)) __PYX_ERR(0, 1443, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__378 = PyUnicode_FromUnicode(__pyx_k__379, (sizeof(__pyx_k__379) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__378)) __PYX_ERR(0, 1443, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__380 = PyUnicode_FromUnicode(__pyx_k__381, (sizeof(__pyx_k__381) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__380)) __PYX_ERR(0, 1443, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__382 = PyUnicode_FromUnicode(__pyx_k__383, (sizeof(__pyx_k__383) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__382)) __PYX_ERR(0, 1443, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__384 = PyUnicode_FromUnicode(__pyx_k__385, (sizeof(__pyx_k__385) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__384)) __PYX_ERR(0, 1443, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__386 = PyUnicode_FromUnicode(__pyx_k__387, (sizeof(__pyx_k__387) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__386)) __PYX_ERR(0, 1443, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__388 = PyUnicode_FromUnicode(__pyx_k__389, (sizeof(__pyx_k__389) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__388)) __PYX_ERR(0, 1444, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__390 = PyUnicode_FromUnicode(__pyx_k__391, (sizeof(__pyx_k__391) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__390)) __PYX_ERR(0, 1444, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__392 = PyUnicode_FromUnicode(__pyx_k__393, (sizeof(__pyx_k__393) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__392)) __PYX_ERR(0, 1444, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__394 = PyUnicode_FromUnicode(__pyx_k__395, (sizeof(__pyx_k__395) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__394)) __PYX_ERR(0, 1444, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__396 = PyUnicode_FromUnicode(__pyx_k__397, (sizeof(__pyx_k__397) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__396)) __PYX_ERR(0, 1444, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__398 = PyUnicode_FromUnicode(__pyx_k__399, (sizeof(__pyx_k__399) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__398)) __PYX_ERR(0, 1444, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__400 = PyUnicode_FromUnicode(__pyx_k__401, (sizeof(__pyx_k__401) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__400)) __PYX_ERR(0, 1444, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__402 = PyUnicode_FromUnicode(__pyx_k__403, (sizeof(__pyx_k__403) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__402)) __PYX_ERR(0, 1444, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__404 = PyUnicode_FromUnicode(__pyx_k__405, (sizeof(__pyx_k__405) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__404)) __PYX_ERR(0, 1444, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__406 = PyUnicode_FromUnicode(__pyx_k__407, (sizeof(__pyx_k__407) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__406)) __PYX_ERR(0, 1444, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__408 = PyUnicode_FromUnicode(__pyx_k__409, (sizeof(__pyx_k__409) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__408)) __PYX_ERR(0, 1444, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__410 = PyUnicode_FromUnicode(__pyx_k__411, (sizeof(__pyx_k__411) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__410)) __PYX_ERR(0, 1444, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__412 = PyUnicode_FromUnicode(__pyx_k__413, (sizeof(__pyx_k__413) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__412)) __PYX_ERR(0, 1444, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__414 = PyUnicode_FromUnicode(__pyx_k__415, (sizeof(__pyx_k__415) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__414)) __PYX_ERR(0, 1445, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__416 = PyUnicode_FromUnicode(__pyx_k__417, (sizeof(__pyx_k__417) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__416)) __PYX_ERR(0, 1445, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__418 = PyUnicode_FromUnicode(__pyx_k__419, (sizeof(__pyx_k__419) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__418)) __PYX_ERR(0, 1445, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__420 = PyUnicode_FromUnicode(__pyx_k__421, (sizeof(__pyx_k__421) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__420)) __PYX_ERR(0, 1445, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__422 = PyUnicode_FromUnicode(__pyx_k__423, (sizeof(__pyx_k__423) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__422)) __PYX_ERR(0, 1445, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__424 = PyUnicode_FromUnicode(__pyx_k__425, (sizeof(__pyx_k__425) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__424)) __PYX_ERR(0, 1445, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__426 = PyUnicode_FromUnicode(__pyx_k__427, (sizeof(__pyx_k__427) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__426)) __PYX_ERR(0, 1445, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__428 = PyUnicode_FromUnicode(__pyx_k__429, (sizeof(__pyx_k__429) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__428)) __PYX_ERR(0, 1445, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__430 = PyUnicode_FromUnicode(__pyx_k__431, (sizeof(__pyx_k__431) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__430)) __PYX_ERR(0, 1445, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__432 = PyUnicode_FromUnicode(__pyx_k__433, (sizeof(__pyx_k__433) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__432)) __PYX_ERR(0, 1445, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__434 = PyUnicode_FromUnicode(__pyx_k__435, (sizeof(__pyx_k__435) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__434)) __PYX_ERR(0, 1445, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__436 = PyUnicode_FromUnicode(__pyx_k__437, (sizeof(__pyx_k__437) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__436)) __PYX_ERR(0, 1445, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__438 = PyUnicode_FromUnicode(__pyx_k__439, (sizeof(__pyx_k__439) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__438)) __PYX_ERR(0, 1445, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__440 = PyUnicode_FromUnicode(__pyx_k__441, (sizeof(__pyx_k__441) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__440)) __PYX_ERR(0, 1446, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__442 = PyUnicode_FromUnicode(__pyx_k__443, (sizeof(__pyx_k__443) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__442)) __PYX_ERR(0, 1446, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__444 = PyUnicode_FromUnicode(__pyx_k__445, (sizeof(__pyx_k__445) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__444)) __PYX_ERR(0, 1446, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__446 = PyUnicode_FromUnicode(__pyx_k__447, (sizeof(__pyx_k__447) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__446)) __PYX_ERR(0, 1446, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__448 = PyUnicode_FromUnicode(__pyx_k__449, (sizeof(__pyx_k__449) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__448)) __PYX_ERR(0, 1446, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__450 = PyUnicode_FromUnicode(__pyx_k__451, (sizeof(__pyx_k__451) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__450)) __PYX_ERR(0, 1446, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__452 = PyUnicode_FromUnicode(__pyx_k__453, (sizeof(__pyx_k__453) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__452)) __PYX_ERR(0, 1446, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__454 = PyUnicode_FromUnicode(__pyx_k__455, (sizeof(__pyx_k__455) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__454)) __PYX_ERR(0, 1446, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__456 = PyUnicode_FromUnicode(__pyx_k__457, (sizeof(__pyx_k__457) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__456)) __PYX_ERR(0, 1446, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__458 = PyUnicode_FromUnicode(__pyx_k__459, (sizeof(__pyx_k__459) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__458)) __PYX_ERR(0, 1446, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__460 = PyUnicode_FromUnicode(__pyx_k__461, (sizeof(__pyx_k__461) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__460)) __PYX_ERR(0, 1446, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__462 = PyUnicode_FromUnicode(__pyx_k__463, (sizeof(__pyx_k__463) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__462)) __PYX_ERR(0, 1446, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__464 = PyUnicode_FromUnicode(__pyx_k__465, (sizeof(__pyx_k__465) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__464)) __PYX_ERR(0, 1446, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__466 = PyUnicode_FromUnicode(__pyx_k__467, (sizeof(__pyx_k__467) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__466)) __PYX_ERR(0, 1447, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__468 = PyUnicode_FromUnicode(__pyx_k__469, (sizeof(__pyx_k__469) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__468)) __PYX_ERR(0, 1447, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__470 = PyUnicode_FromUnicode(__pyx_k__471, (sizeof(__pyx_k__471) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__470)) __PYX_ERR(0, 1447, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__472 = PyUnicode_FromUnicode(__pyx_k__473, (sizeof(__pyx_k__473) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__472)) __PYX_ERR(0, 1447, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__474 = PyUnicode_FromUnicode(__pyx_k__475, (sizeof(__pyx_k__475) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__474)) __PYX_ERR(0, 1447, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__476 = PyUnicode_FromUnicode(__pyx_k__477, (sizeof(__pyx_k__477) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__476)) __PYX_ERR(0, 1447, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__478 = PyUnicode_FromUnicode(__pyx_k__479, (sizeof(__pyx_k__479) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__478)) __PYX_ERR(0, 1447, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__480 = PyUnicode_FromUnicode(__pyx_k__481, (sizeof(__pyx_k__481) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__480)) __PYX_ERR(0, 1447, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__482 = PyUnicode_FromUnicode(__pyx_k__483, (sizeof(__pyx_k__483) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__482)) __PYX_ERR(0, 1447, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__484 = PyUnicode_FromUnicode(__pyx_k__485, (sizeof(__pyx_k__485) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__484)) __PYX_ERR(0, 1447, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__486 = PyUnicode_FromUnicode(__pyx_k__487, (sizeof(__pyx_k__487) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__486)) __PYX_ERR(0, 1447, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__488 = PyUnicode_FromUnicode(__pyx_k__489, (sizeof(__pyx_k__489) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__488)) __PYX_ERR(0, 1447, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:  __pyx_ustring__490 = PyUnicode_FromUnicode(__pyx_k__491, (sizeof(__pyx_k__491) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__490)) __PYX_ERR(0, 1447, __pyx_L1_error)
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./spacy-2.2.4/spacy/pipeline/pipes.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./spacy-2.2.4/spacy/matcher/matcher.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/_innovations.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/_stl.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/_exponential_smoothers.c:        return PyUnicode_FromUnicode(NULL, 0);
-./thinc-7.4.1/thinc/linear/linear.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./thinc-7.4.1/thinc/neural/ops.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./Cython-0.29.20/docs/src/tutorial/strings.rst:of code units, call :c:func:`PyUnicode_GetSize` directly.
-./Cython-0.29.20/Cython/Includes/cpython/unicode.pxd:    unicode PyUnicode_FromUnicode(Py_UNICODE *u, Py_ssize_t size)
-./Cython-0.29.20/Cython/Includes/cpython/unicode.pxd:    Py_UNICODE* PyUnicode_AsUnicode(object o) except NULL
-./Cython-0.29.20/Cython/Includes/cpython/unicode.pxd:    Py_ssize_t PyUnicode_GetSize(object o) except -1
-./aiokafka-0.6.0/aiokafka/record/_crecords/default_records.c:        return PyUnicode_FromUnicode(NULL, 0);
-./astropy-4.0.1.post1/astropy/io/fits/_utils.c:        return PyUnicode_FromUnicode(NULL, 0);
-./astropy-4.0.1.post1/astropy/io/fits/_utils.c:        return PyUnicode_FromUnicode(NULL, 0);
-./astropy-4.0.1.post1/astropy/io/fits/_utils.c:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
-./astropy-4.0.1.post1/astropy/io/ascii/cparser.c:        return PyUnicode_FromUnicode(NULL, 0);
-./av-8.0.2/src/av/sidedata/motionvectors.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./av-8.0.2/src/av/sidedata/motionvectors.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./av-8.0.2/src/av/sidedata/sidedata.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./av-8.0.2/src/av/sidedata/sidedata.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./av-8.0.2/src/av/filter/graph.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./av-8.0.2/src/av/video/frame.c:        return PyUnicode_FromUnicode(NULL, 0);
-./gevent-20.6.1/src/gevent/_generated_include/decode_c_string_impl_d183e8a8665c5498c4e62b4d110273b570eeaaef.h:        return PyUnicode_FromUnicode(NULL, 0);
-./lxml-4.5.1/src/lxml/html/diff.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./pipenv-2020.6.2/pipenv/vendor/markupsafe/_speedups.c:	out = (PyUnicodeObject*)PyUnicode_FromUnicode(NULL, PyUnicode_GET_SIZE(in) + delta);
-./pmdarima-1.6.1/pmdarima/preprocessing/exog/_fourier.c:        return PyUnicode_FromUnicode(NULL, 0);
-./pyzmq-19.0.1/zmq/backend/cython/error.c:        return PyUnicode_FromUnicode(NULL, 0);
-./pyzmq-19.0.1/zmq/backend/cython/message.c:        return PyUnicode_FromUnicode(NULL, 0);
-./reportlab-3.5.42/src/rl_addons/renderPM/_renderPM.c:		textlen = PyUnicode_GetSize(obj0);
-./reportlab-3.5.42/src/rl_addons/renderPM/_renderPM.c:		utext = PyUnicode_AsUnicode(obj0);
-./reportlab-3.5.42/src/rl_addons/renderPM/_renderPM.c:		textlen = PyUnicode_GetSize(obj0);
-./reportlab-3.5.42/src/rl_addons/renderPM/_renderPM.c:		utext = PyUnicode_AsUnicode(obj0);
-./scikit-image-0.17.2/skimage/future/graph/_ncut_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/filters/rank/bilateral_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/filters/rank/core_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/segmentation/graph/_ncut_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/filters/rank/percentile_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scikit-image-0.17.2/skimage/filters/rank/generic_cy.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/io/matlab/mio5_utils.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./scipy-1.4.1/scipy/io/matlab/mio5_utils.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./scipy-1.4.1/scipy/sparse/csgraph/_reordering.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/sparse/csgraph/_min_spanning_tree.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/sparse/csgraph/_matching.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/sparse/csgraph/_flow.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/sparse/csgraph/_shortest_path.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/optimize/_lsq/givens_elimination.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/optimize/_trlib/_trlib.c:        return PyUnicode_FromUnicode(NULL, 0);
-./scipy-1.4.1/scipy/ndimage/src/_ni_label.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_initialization.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/kalmanf/kalman_loglike.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_tools.c:    uval = PyUnicode_FromUnicode(NULL, ulength);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_tools.c:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_tools.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_kalman_smoother.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/regime_switching/_hamilton_filter.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_kalman_filter.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_representation.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_simulation_smoother.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/regime_switching/_kim_smoother.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/innovations/_arma_innovations.c:        return PyUnicode_FromUnicode(NULL, 0);
-./thriftpy2-0.4.11/thriftpy2/protocol/cybin/cybin.c:        return PyUnicode_FromUnicode(NULL, 0);
-./thriftpy-0.3.9/thriftpy/protocol/cybin/cybin.c:        return PyUnicode_FromUnicode(NULL, 0);
-./astropy-4.0.1.post1/astropy/io/votable/src/tablewriter.c:                if ((str_tmp = PyUnicode_AsUnicode(str_val)) == NULL) {
-./astropy-4.0.1.post1/astropy/utils/xml/src/iterparse.c:        uinput = PyUnicode_AsUnicode(input_coerce);
-./astropy-4.0.1.post1/astropy/utils/xml/src/iterparse.c:            output_obj = PyUnicode_FromUnicode(uoutput, up - uoutput);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_filters/_univariate_diffuse.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_filters/_inversions.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_smoothers/_classical.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_filters/_conventional.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_smoothers/_conventional.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_filters/_univariate.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_smoothers/_alternative.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_smoothers/_univariate.c:        return PyUnicode_FromUnicode(NULL, 0);
-./statsmodels-0.11.1/statsmodels/tsa/statespace/_smoothers/_univariate_diffuse.c:        return PyUnicode_FromUnicode(NULL, 0);
-./astropy-4.0.1.post1/astropy/timeseries/periodograms/lombscargle/implementations/cython_impl.c:        return PyUnicode_FromUnicode(NULL, 0);
-./grpcio-1.29.0/src/python/grpcio/grpc/_cython/cygrpc.cpp:        return PyUnicode_FromUnicode(NULL, 0);
-./grpcio-1.29.0/src/python/grpcio/grpc/_cython/cygrpc.cpp:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./Cython-0.29.20/Cython/Compiler/ExprNodes.py:1636:                    "%s = PyUnicode_FromUnicode(%s, (sizeof(%s) / sizeof(Py_UNICODE))-1); %s" % (
+./Cython-0.29.20/Cython/Includes/cpython/unicode.pxd:104:    Py_UNICODE* PyUnicode_AsUnicode(object o) except NULL
+./Cython-0.29.20/Cython/Includes/cpython/unicode.pxd:107:    Py_ssize_t PyUnicode_GetSize(object o) except -1
+./Cython-0.29.20/Cython/Includes/cpython/unicode.pxd:93:    unicode PyUnicode_FromUnicode(Py_UNICODE *u, Py_ssize_t size)
+./Cython-0.29.20/Cython/Utility/StringTools.c:470:        return PyUnicode_FromUnicode(NULL, 0);
+./Cython-0.29.20/Cython/Utility/StringTools.c:506:        return PyUnicode_FromUnicode(NULL, 0);
+./Cython-0.29.20/Cython/Utility/StringTools.c:562:        return PyUnicode_FromUnicode(NULL, 0);
+./Cython-0.29.20/Cython/Utility/StringTools.c:567:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
+./Cython-0.29.20/Cython/Utility/StringTools.c:821:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./Cython-0.29.20/Cython/Utility/StringTools.c:896:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./Cython-0.29.20/docs/src/tutorial/strings.rst:698:of code units, call :c:func:`PyUnicode_GetSize` directly.
+./DoubleMetaphone-0.1/doublemetaphone/dm.cpp:1173:        return PyUnicode_FromUnicode(NULL, 0);
+./DoubleMetaphone-0.1/doublemetaphone/doublemetaphone.cpp:1173:        return PyUnicode_FromUnicode(NULL, 0);
+./Fiona-1.8.13.post1/fiona/_crs.c:4536:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./Fiona-1.8.13.post1/fiona/_err.c:6357:        return PyUnicode_FromUnicode(NULL, 0);
+./Fiona-1.8.13.post1/fiona/_shim.c:5184:        return PyUnicode_FromUnicode(NULL, 0);
+./Fiona-1.8.13.post1/fiona/_shim1.c:4484:        return PyUnicode_FromUnicode(NULL, 0);
+./Fiona-1.8.13.post1/fiona/_shim2.c:4853:        return PyUnicode_FromUnicode(NULL, 0);
+./Fiona-1.8.13.post1/fiona/_shim22.c:4918:        return PyUnicode_FromUnicode(NULL, 0);
+./Fiona-1.8.13.post1/fiona/_shim3.c:4963:        return PyUnicode_FromUnicode(NULL, 0);
+./Fiona-1.8.13.post1/fiona/_transform.cpp:7196:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./Fiona-1.8.13.post1/fiona/ogrext.c:34428:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./Fiona-1.8.13.post1/fiona/ogrext.c:35304:        return PyUnicode_FromUnicode(NULL, 0);
+./Genshi-0.7.3/genshi/_speedups.c:113:    out = (PyUnicodeObject*) PyUnicode_FromUnicode(NULL, len);
+./MarkupSafe-1.1.1/src/markupsafe/_speedups.c:79:	out = (PyUnicodeObject*)PyUnicode_FromUnicode(NULL, PyUnicode_GET_SIZE(in) + delta);
+./PyBluez-0.23/msbt/_msbt.c:480:        item_tuple = PyUnicode_FromUnicode(
+./PyICU-2.5/bases.cpp:2013:        return PyUnicode_FromUnicode(&c, 1);
+./PyICU-2.5/charset.cpp:336:    return PyUnicode_FromUnicode(NULL, 0);
+./PyICU-2.5/common.cpp:177:        return PyUnicode_FromUnicode((const Py_UNICODE *) utf16, len16);
+./PyICU-2.5/common.cpp:181:        PyObject *u = PyUnicode_FromUnicode(NULL, len32);
+./PyICU-2.5/common.cpp:359:                  Py_UNICODE *pchars = PyUnicode_AsUnicodeAndSize(object, &len);
+./PyICU-2.5/common.cpp:366:                  Py_UNICODE *pchars = PyUnicode_AsUnicodeAndSize(object, &len);
+./PyQt5-5.15.0/designer/pluginloader.cpp:191:    PyObject *dobj = PyUnicode_FromUnicode(0, ucs4.size());
+./PyQt5-5.15.0/designer/pluginloader.cpp:202:    PyObject *dobj = PyUnicode_FromUnicode(0, native_dir.length());
+./PyQt5-5.15.0/qmlscene/pluginloader.cpp:348:    PyObject *plugin_dir_obj = PyUnicode_FromUnicode(0, ucs4.size());
+./PyQt5-5.15.0/qmlscene/pluginloader.cpp:359:    PyObject *plugin_dir_obj = PyUnicode_FromUnicode(0,
+./PyQt5-5.15.0/qpy/QtCore/qpycore_qstring.cpp:144:    if ((obj = PyUnicode_FromUnicode(NULL, ucs4.size())) == NULL)
+./PyQt5-5.15.0/qpy/QtCore/qpycore_qstring.cpp:150:    if ((obj = PyUnicode_FromUnicode(NULL, qstr.length())) == NULL)
+./PyWavelets-1.1.1/pywt/_extensions/_cwt.c:25732:        return PyUnicode_FromUnicode(NULL, 0);
+./PyWavelets-1.1.1/pywt/_extensions/_dwt.c:35508:        return PyUnicode_FromUnicode(NULL, 0);
+./PyWavelets-1.1.1/pywt/_extensions/_pywt.c:40640:        return PyUnicode_FromUnicode(NULL, 0);
+./PyWavelets-1.1.1/pywt/_extensions/_swt.c:29536:        return PyUnicode_FromUnicode(NULL, 0);
+./Shapely-1.7.0/shapely/vectorized/_vectorized.c:20403:        return PyUnicode_FromUnicode(NULL, 0);
+./aiohttp-3.6.2/aiohttp/_http_parser.c:19873:        return PyUnicode_FromUnicode(NULL, 0);
+./aiohttp-3.6.2/aiohttp/_http_parser.c:21171:        return PyUnicode_FromUnicode(NULL, 0);
+./aiokafka-0.6.0/aiokafka/record/_crecords/default_records.c:14214:        return PyUnicode_FromUnicode(NULL, 0);
+./apsw-3.9.2-r1/src/apsw.c:1053:      unires=PyUnicode_FromUnicode(NULL, PyUnicode_GET_SIZE(value)+2);
+./apsw-3.9.2-r1/src/apsw.c:1120:			unires=PyUnicode_FromUnicode(NULL, buflen*2+3),
+./apsw-3.9.2-r1/src/pyutil.c:246:          PyObject *res=PyUnicode_FromUnicode(NULL, size);
+./astropy-4.0.1.post1/astropy/io/ascii/cparser.c:26251:        return PyUnicode_FromUnicode(NULL, 0);
+./astropy-4.0.1.post1/astropy/io/fits/_utils.c:2793:        return PyUnicode_FromUnicode(NULL, 0);
+./astropy-4.0.1.post1/astropy/io/fits/_utils.c:2819:        return PyUnicode_FromUnicode(NULL, 0);
+./astropy-4.0.1.post1/astropy/io/fits/_utils.c:2824:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
+./astropy-4.0.1.post1/astropy/io/votable/src/tablewriter.c:270:                if ((str_tmp = PyUnicode_AsUnicode(str_val)) == NULL) {
+./astropy-4.0.1.post1/astropy/stats/_stats.c:25671:        return PyUnicode_FromUnicode(NULL, 0);
+./astropy-4.0.1.post1/astropy/timeseries/periodograms/lombscargle/implementations/cython_impl.c:22769:        return PyUnicode_FromUnicode(NULL, 0);
+./astropy-4.0.1.post1/astropy/utils/xml/src/iterparse.c:1181:        uinput = PyUnicode_AsUnicode(input_coerce);
+./astropy-4.0.1.post1/astropy/utils/xml/src/iterparse.c:1226:            output_obj = PyUnicode_FromUnicode(uoutput, up - uoutput);
+./asyncpg-0.20.1/asyncpg/pgproto/pgproto.c:36508:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./asyncpg-0.20.1/asyncpg/pgproto/pgproto.c:36671:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./asyncpg-0.20.1/asyncpg/pgproto/pgproto.c:37449:        return PyUnicode_FromUnicode(NULL, 0);
+./asyncpg-0.20.1/asyncpg/protocol/protocol.c:80584:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./asyncpg-0.20.1/asyncpg/protocol/protocol.c:81261:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./asyncpg-0.20.1/asyncpg/protocol/protocol.c:81483:        return PyUnicode_FromUnicode(NULL, 0);
+./av-8.0.2/src/av/error.c:9196:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./av-8.0.2/src/av/error.c:9633:        return PyUnicode_FromUnicode(NULL, 0);
+./av-8.0.2/src/av/filter/graph.c:7708:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./av-8.0.2/src/av/sidedata/motionvectors.c:5437:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./av-8.0.2/src/av/sidedata/motionvectors.c:5725:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./av-8.0.2/src/av/sidedata/sidedata.c:6405:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./av-8.0.2/src/av/sidedata/sidedata.c:6604:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./av-8.0.2/src/av/video/frame.c:26272:        return PyUnicode_FromUnicode(NULL, 0);
+./blis-0.4.1/blis/cy.c:25165:        return PyUnicode_FromUnicode(NULL, 0);
+./blis-0.4.1/blis/py.c:32504:        return PyUnicode_FromUnicode(NULL, 0);
+./cffi-1.14.0/c/_cffi_backend.c:107:#  define PyText_GetSize PyUnicode_GetSize
+./cffi-1.14.0/c/wchar_helper.h:35:    unicode = PyUnicode_FromUnicode(NULL, alloc);
+./cffi-1.14.0/c/wchar_helper.h:68:    return PyUnicode_FromUnicode((const Py_UNICODE *)w, size);
+./cffi-1.14.0/c/wchar_helper.h:76:    return PyUnicode_FromUnicode((const Py_UNICODE *)w, size);
+./cffi-1.14.0/c/wchar_helper.h:83:    PyObject *result = PyUnicode_FromUnicode(NULL, size);
+./clickhouse-driver-0.1.3/clickhouse_driver/bufferedreader.c:5992:        return PyUnicode_FromUnicode(NULL, 0);
+./clickhouse-driver-0.1.3/clickhouse_driver/columns/stringcolumn.c:5736:        return PyUnicode_FromUnicode(NULL, 0);
+./couchbase-3.0.0/src/ext.c:527:        *length = PyUnicode_GetSize(object);
+./cx_Freeze-6.1/source/util.c:372:        return PyUnicode_FromUnicode(dir, wcslen(dir));
+./cx_Freeze-6.1/source/util.c:388:        return PyUnicode_FromUnicode(dir, wcslen(dir));
+./dedupe-2.0.3/dedupe/cpredicates.c:2044:        return PyUnicode_FromUnicode(NULL, 0);
+./dedupe-2.0.3/dedupe/cpredicates.c:2049:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
+./dedupe-hcluster-0.3.8/hcluster/_hierarchy.c:31781:        return PyUnicode_FromUnicode(NULL, 0);
+./deprecated-apis:1:PyUnicode_FromUnicode
+./deprecated-apis:2:PyUnicode_AsUnicode
+./deprecated-apis:3:PyUnicode_TransformDecimalToASCII
+./deprecated-apis:4:PyUnicode_AsUnicodeAndSize
+./deprecated-apis:5:PyUnicode_AsUnicodeCopy
+./deprecated-apis:6:PyUnicode_GetSize
+./fastdtw-0.3.4/fastdtw/_fastdtw.cpp:24065:        return PyUnicode_FromUnicode(NULL, 0);
+./fuzzyset-0.0.19/fuzzyset/cfuzzyset.c:8026:        return PyUnicode_FromUnicode(NULL, 0);
+./fuzzyset-0.0.19/fuzzyset/cfuzzyset.c:8031:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
+./gensim-3.8.3/gensim/_matutils.c:25254:        return PyUnicode_FromUnicode(NULL, 0);
+./gensim-3.8.3/gensim/models/_utils_any2vec.c:6024:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./gensim-3.8.3/gensim/models/_utils_any2vec.c:6233:        return PyUnicode_FromUnicode(NULL, 0);
+./gensim-3.8.3/gensim/models/_utils_any2vec.c:6238:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
+./gensim-3.8.3/gensim/models/nmf_pgd.c:18132:        return PyUnicode_FromUnicode(NULL, 0);
+./gevent-20.6.1/src/gevent/_generated_include/decode_c_string_impl_d183e8a8665c5498c4e62b4d110273b570eeaaef.h:23:        return PyUnicode_FromUnicode(NULL, 0);
+./grapheme-0.6.0/grapheme/cython/api.c:4475:  __pyx_ustring__20 = PyUnicode_FromUnicode(__pyx_k__21, (sizeof(__pyx_k__21) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__20)) __PYX_ERR(0, 1, __pyx_L1_error)
+./grapheme-0.6.0/grapheme/cython/api.c:4477:  __pyx_ustring__22 = PyUnicode_FromUnicode(__pyx_k__23, (sizeof(__pyx_k__23) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__22)) __PYX_ERR(0, 1, __pyx_L1_error)
+./grapheme-0.6.0/grapheme/cython/api.c:4479:  __pyx_ustring__24 = PyUnicode_FromUnicode(__pyx_k__25, (sizeof(__pyx_k__25) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__24)) __PYX_ERR(0, 1, __pyx_L1_error)
+./grapheme-0.6.0/grapheme/cython/api.c:4481:  __pyx_ustring__26 = PyUnicode_FromUnicode(__pyx_k__27, (sizeof(__pyx_k__27) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__26)) __PYX_ERR(0, 1, __pyx_L1_error)
+./grapheme-0.6.0/grapheme/cython/api.c:4483:  __pyx_ustring__28 = PyUnicode_FromUnicode(__pyx_k__29, (sizeof(__pyx_k__29) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__28)) __PYX_ERR(0, 1, __pyx_L1_error)
+./grapheme-0.6.0/grapheme/cython/finder.c:10703:        return PyUnicode_FromUnicode(NULL, 0);
+./grapheme-0.6.0/grapheme/cython/finder.c:10708:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
+./grpcio-1.29.0/src/python/grpcio/grpc/_cython/cygrpc.cpp:125403:        return PyUnicode_FromUnicode(NULL, 0);
+./grpcio-1.29.0/src/python/grpcio/grpc/_cython/cygrpc.cpp:128190:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./hdbscan-0.8.26/hdbscan/ball_tree.c:40576:        return PyUnicode_FromUnicode(NULL, 0);
+./hdbscan-0.8.26/hdbscan/kd_tree.c:41191:        return PyUnicode_FromUnicode(NULL, 0);
+./httptools-0.1.1/httptools/parser/parser.c:10379:        return PyUnicode_FromUnicode(NULL, 0);
+./ibm_db-3.0.1/ibm_db.c:1305:                    PyUnicode_GetSize(databaseObj),
+./ibm_db-3.0.1/ibm_db.c:1307:                    PyUnicode_GetSize(uidObj),
+./ibm_db-3.0.1/ibm_db.c:1309:                    PyUnicode_GetSize(passwordObj));
+./ibm_db-3.0.1/ibm_db.c:1428:        return PyUnicode_FromUnicode((Py_UNICODE *)sqlwcharData, sqlwcharBytesLen / sizeof(SQLWCHAR));
+./ibm_db-3.0.1/ibm_db.c:5155:                stmt_size = PyUnicode_GetSize(py_stmt);
+./ibm_db-3.0.1/ibm_db.c:5489:                    curr->ivalue = PyUnicode_GetSize(bind_data);
+./imagecodecs-2020.5.30/imagecodecs/_aec.c:23946:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_aec.c:25215:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_bitshuffle.c:23080:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_bitshuffle.c:24314:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_blosc.c:21868:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_blosc.c:22759:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./imagecodecs-2020.5.30/imagecodecs/_brotli.c:22449:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_brotli.c:23683:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_bz2.c:23024:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_bz2.c:23326:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_gif.c:26462:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_gif.c:26884:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_gif.c:27003:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./imagecodecs-2020.5.30/imagecodecs/_imcd.c:31666:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_imcd.c:31968:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_imcd.c:32020:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./imagecodecs-2020.5.30/imagecodecs/_jpeg12.c:27154:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_jpeg2k.c:27606:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_jpeg2k.c:29049:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./imagecodecs-2020.5.30/imagecodecs/_jpeg8.c:26655:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_jpegls.c:24962:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_jpegls.c:25404:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_jpegsof3.c:22133:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_jpegxl.c:23306:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_jpegxl.c:24637:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_jpegxr.c:31939:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_jpegxr.c:32260:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./imagecodecs-2020.5.30/imagecodecs/_jpegxr.c:33710:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_lerc.c:24175:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_lerc.c:25543:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_lz4.c:22610:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./imagecodecs-2020.5.30/imagecodecs/_lz4.c:23499:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_lzf.c:21822:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./imagecodecs-2020.5.30/imagecodecs/_lzf.c:21985:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_lzf.c:23470:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_lzma.c:23557:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_lzma.c:24826:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_png.c:24619:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_png.c:26032:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./imagecodecs-2020.5.30/imagecodecs/_shared.c:23782:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_shared.c:25169:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_snappy.c:22702:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_snappy.c:23936:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_tiff.c:30399:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_tiff.c:31592:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_tiff.c:31709:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./imagecodecs-2020.5.30/imagecodecs/_webp.c:23234:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_webp.c:24632:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_zfp.c:25486:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_zlib.c:22706:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_zlib.c:23008:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_zopfli.c:22585:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_zstd.c:22331:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./imagecodecs-2020.5.30/imagecodecs/_zstd.c:22402:        return PyUnicode_FromUnicode(NULL, 0);
+./imagecodecs-2020.5.30/imagecodecs/_zstd.c:23009:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./implicit-0.4.2/implicit/_als.cpp:41707:        return PyUnicode_FromUnicode(NULL, 0);
+./implicit-0.4.2/implicit/_nearest_neighbours.cpp:22794:        return PyUnicode_FromUnicode(NULL, 0);
+./implicit-0.4.2/implicit/bpr.cpp:29532:        return PyUnicode_FromUnicode(NULL, 0);
+./implicit-0.4.2/implicit/cuda/_cuda.cpp:20697:        return PyUnicode_FromUnicode(NULL, 0);
+./implicit-0.4.2/implicit/evaluation.cpp:21588:        return PyUnicode_FromUnicode(NULL, 0);
+./implicit-0.4.2/implicit/lmf.cpp:28459:        return PyUnicode_FromUnicode(NULL, 0);
+./implicit-0.4.2/implicit/recommender_base.cpp:25066:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./implicit-0.4.2/implicit/recommender_base.cpp:25229:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./implicit-0.4.2/implicit/recommender_base.cpp:26094:        return PyUnicode_FromUnicode(NULL, 0);
+./javabridge-1.0.19/_javabridge.c:31224:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./javabridge-1.0.19/_javabridge.c:31387:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./javabridge-1.0.19/_javabridge.c:32461:        return PyUnicode_FromUnicode(NULL, 0);
+./jq-1.0.1/jq.c:9427:        return PyUnicode_FromUnicode(NULL, 0);
+./lightfm-1.15/lightfm/_lightfm_fast_no_openmp.c:27625:        return PyUnicode_FromUnicode(NULL, 0);
+./lightfm-1.15/lightfm/_lightfm_fast_openmp.c:27985:        return PyUnicode_FromUnicode(NULL, 0);
+./lupa-1.9/lupa/_lupa.c:31954:        return PyUnicode_FromUnicode(NULL, 0);
+./lupa-1.9/lupa/_lupa.c:33605:        return PyUnicode_FromUnicode(NULL, 0);
+./lxml-4.5.1/src/lxml/etree.c:261165:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./lxml-4.5.1/src/lxml/etree.c:261337:        return PyUnicode_FromUnicode(NULL, 0);
+./lxml-4.5.1/src/lxml/etree.c:261726:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./lxml-4.5.1/src/lxml/etree.c:261791:        return PyUnicode_FromUnicode(NULL, 0);
+./lxml-4.5.1/src/lxml/html/diff.c:22054:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./lxml-4.5.1/src/lxml/objectify.c:38474:        return PyUnicode_FromUnicode(NULL, 0);
+./lxml-4.5.1/src/lxml/objectify.c:38743:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./lxml-4.5.1/src/lxml/objectify.c:39402:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./marisa-trie-0.7.5/src/marisa_trie.cpp:19121:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./marisa-trie-0.7.5/src/marisa_trie.cpp:20109:        return PyUnicode_FromUnicode(NULL, 0);
+./marisa-trie-0.7.5/src/marisa_trie.cpp:20114:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
+./marisa-trie-0.7.5/src/marisa_trie.cpp:20142:        return PyUnicode_FromUnicode(NULL, 0);
+./matplotlib-3.2.1/src/ft2font_wrapper.cpp:708:        Py_UNICODE *unistr = PyUnicode_AsUnicode(textobj);
+./msgpack-1.0.0/msgpack/_cmsgpack.cpp:14091:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./mujoco-py-2.0.2.10/mujoco_py/cymj.c:199370:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./mujoco-py-2.0.2.10/mujoco_py/cymj.c:199494:        return PyUnicode_FromUnicode(NULL, 0);
+./mypy-0.780/mypyc/lib-rt/getargs.c:771:                *p = PyUnicode_AsUnicodeAndSize(arg, &len);
+./mypy-0.780/mypyc/lib-rt/getargs.c:786:                *p = PyUnicode_AsUnicodeAndSize(arg, &len);
+./mysql-connector-python-8.0.20/src/mysqlxpb/python.h:53:#define PyString_Size PyUnicode_GetSize
+./netifaces-0.10.9/netifaces.c:10:    return PyUnicode_FromUnicode(&uc, 0);
+./netifaces-0.10.9/netifaces.c:1567:	ifname = PyUnicode_FromUnicode (pwcsName, wcslen (pwcsName));
+./netifaces-0.10.9/netifaces.c:1674:      ifname = PyUnicode_FromUnicode (pwcsName, wcslen (pwcsName));
+./orderedset-2.0.3/lib/orderedset/_orderedset.c:14675:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./pipenv-2020.6.2/pipenv/vendor/markupsafe/_speedups.c:79:	out = (PyUnicodeObject*)PyUnicode_FromUnicode(NULL, PyUnicode_GET_SIZE(in) + delta);
+./pmdarima-1.6.1/pmdarima/arima/_arima.c:30114:        return PyUnicode_FromUnicode(NULL, 0);
+./pmdarima-1.6.1/pmdarima/preprocessing/exog/_fourier.c:21202:        return PyUnicode_FromUnicode(NULL, 0);
+./pmdarima-1.6.1/pmdarima/utils/_array.c:23356:        return PyUnicode_FromUnicode(NULL, 0);
+./pomegranate-0.13.3/pomegranate/BayesianNetwork.c:64751:        return PyUnicode_FromUnicode(NULL, 0);
+./pomegranate-0.13.3/pomegranate/MarkovNetwork.c:35139:        return PyUnicode_FromUnicode(NULL, 0);
+./pomegranate-0.13.3/pomegranate/distributions/ConditionalProbabilityTable.c:32600:        return PyUnicode_FromUnicode(NULL, 0);
+./pomegranate-0.13.3/pomegranate/distributions/JointProbabilityTable.c:31401:        return PyUnicode_FromUnicode(NULL, 0);
+./pomegranate-0.13.3/pomegranate/hmm.c:65806:        return PyUnicode_FromUnicode(NULL, 0);
+./pyScss-1.3.7/scss/src/block_locator.c:321:		self->codestr_sz = PyUnicode_GetSize((PyObject*)codestr);
+./pyahocorasick-1.4.0/AutomatonItemsIter.c:227:                    return PyUnicode_FromUnicode((Py_UNICODE*)(iter->buffer + 1), depth);
+./pygame-1.9.6/src_c/_sdl2/audio.c:21061:        return PyUnicode_FromUnicode(NULL, 0);
+./pygame-1.9.6/src_c/_sdl2/sdl2.c:2382:        return PyUnicode_FromUnicode(NULL, 0);
+./pygame-1.9.6/src_c/_sdl2/video.c:14710:        return PyUnicode_FromUnicode(NULL, 0);
+./pygame-1.9.6/src_c/math.c:1599:    attr = PyUnicode_AsUnicode(attr_unicode);
+./pygame-1.9.6/src_c/math.c:1679:    attr = PyUnicode_AsUnicode(attr_unicode);
+./pygame-1.9.6/src_c/pgcompat.h:50:#define Text_GetSize PyUnicode_GetSize
+./pyhacrf-datamade-0.2.5/pyhacrf/adjacent.c:24741:        return PyUnicode_FromUnicode(NULL, 0);
+./pyhacrf-datamade-0.2.5/pyhacrf/algorithms.c:28006:        return PyUnicode_FromUnicode(NULL, 0);
+./pyjq-2.4.0/_pyjq.c:4437:        return PyUnicode_FromUnicode(NULL, 0);
+./pyobjc-core-6.2/Modules/objc/objc_support.m:2239:        if (PyUnicode_Check(argument) && PyUnicode_GetSize(argument) == 1) {
+./pyobjc-core-6.2/Modules/objc/objc_support.m:2240:            *(int*)datum = (int)(*PyUnicode_AsUnicode(argument));
+./pyobjc-core-6.2/Modules/objc/struct-wrapper.m:689:            v = PyUnicode_FromUnicode(&ch, 1);
+./pyodbc-4.0.30/src/errors.cpp:331:    if (!msg || PyUnicode_GetSize(msg.Get()) == 0)
+./pyodbc-4.0.30/src/pyodbccompat.h:75:    return PyUnicode_FromUnicode(0, length);
+./pyodbc-4.0.30/src/pyodbcmodule.cpp:1338:    PyObject* result = PyUnicode_FromUnicode(0, length);
+./pyodbc-4.0.30/src/pyodbcmodule.cpp:706:    return PyUnicode_FromUnicode(&chDecimal, 1);
+./pyproj-2.6.1.post1/pyproj/_geod.c:6705:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./pysam-0.16.0/pysam/libcalignedsegment.c:63092:        return PyUnicode_FromUnicode(NULL, 0);
+./pysam-0.16.0/pysam/libcutils.c:9984:        return PyUnicode_FromUnicode(NULL, 0);
+./pystan-2.19.1.1/pystan/_api.cpp:2528:        return PyUnicode_FromUnicode(NULL, 0);
+./pystan-2.19.1.1/pystan/_chains.cpp:20970:        return PyUnicode_FromUnicode(NULL, 0);
+./pystan-2.19.1.1/pystan/_misc.cpp:18596:        return PyUnicode_FromUnicode(NULL, 0);
+./python-Levenshtein-0.12.0/Levenshtein/_levenshtein.c:1001:      result = PyUnicode_FromUnicode(medstr, len);
+./python-Levenshtein-0.12.0/Levenshtein/_levenshtein.c:1088:      result = PyUnicode_FromUnicode(medstr, len);
+./python-Levenshtein-0.12.0/Levenshtein/_levenshtein.c:1930:      result = PyUnicode_FromUnicode(s, len);
+./python-Levenshtein-0.12.0/Levenshtein/_levenshtein.c:1946:      result = PyUnicode_FromUnicode(s, len);
+./python-crfsuite-0.9.7/pycrfsuite/_pycrfsuite.cpp:13906:        return PyUnicode_FromUnicode(NULL, 0);
+./pythonnet-2.4.0/src/runtime/converter.cs:637:                        if (Runtime.PyUnicode_GetSize(value) == 1)
+./pythonnet-2.4.0/src/runtime/converter.cs:639:                            op = Runtime.PyUnicode_AsUnicode(value);
+./pythonnet-2.4.0/src/runtime/pystring.cs:12:    /// 2011-01-29: ...Then why does the string constructor call PyUnicode_FromUnicode()???
+./pythonnet-2.4.0/src/runtime/pystring.cs:56:            obj = Runtime.PyUnicode_FromUnicode(s, s.Length);
+./pythonnet-2.4.0/src/runtime/runtime.cs:1457:        internal static IntPtr PyUnicode_FromUnicode(string s, long size)
+./pythonnet-2.4.0/src/runtime/runtime.cs:1462:        internal static long PyUnicode_GetSize(IntPtr ob)
+./pythonnet-2.4.0/src/runtime/runtime.cs:1467:        [DllImport(_PythonDll, CallingConvention = CallingConvention.Cdecl, EntryPoint = "PyUnicode_GetSize")]
+./pythonnet-2.4.0/src/runtime/runtime.cs:1471:        internal static extern IntPtr PyUnicode_AsUnicode(IntPtr ob);
+./pythonnet-2.4.0/src/runtime/runtime.cs:1484:        internal static IntPtr PyUnicode_FromUnicode(string s, long size)
+./pythonnet-2.4.0/src/runtime/runtime.cs:1486:            return PyUnicode_FromUnicode(s, new IntPtr(size));
+./pythonnet-2.4.0/src/runtime/runtime.cs:1491:        private static extern IntPtr PyUnicode_FromUnicode(
+./pythonnet-2.4.0/src/runtime/runtime.cs:1496:        internal static long PyUnicode_GetSize(IntPtr ob)
+./pythonnet-2.4.0/src/runtime/runtime.cs:1507:        internal static extern IntPtr PyUnicode_AsUnicode(IntPtr ob);
+./pythonnet-2.4.0/src/runtime/runtime.cs:1516:            return PyUnicode_FromUnicode(s, s.Length);
+./pythonnet-2.4.0/src/runtime/runtime.cs:1545:                IntPtr p = PyUnicode_AsUnicode(op);
+./pythonnet-2.4.0/src/runtime/runtime.cs:1546:                int length = (int)PyUnicode_GetSize(op);
+./pyxDamerauLevenshtein-1.6/pyxdameraulevenshtein/pyxdameraulevenshtein.c:6615:        return PyUnicode_FromUnicode(NULL, 0);
+./pyzmq-19.0.1/zmq/backend/cython/error.c:1787:        return PyUnicode_FromUnicode(NULL, 0);
+./pyzmq-19.0.1/zmq/backend/cython/message.c:9826:        return PyUnicode_FromUnicode(NULL, 0);
+./rasterio-1.1.5/rasterio/_base.c:43906:        return PyUnicode_FromUnicode(NULL, 0);
+./rasterio-1.1.5/rasterio/_crs.c:25374:        return PyUnicode_FromUnicode(NULL, 0);
+./rasterio-1.1.5/rasterio/_env.c:28980:        return PyUnicode_FromUnicode(NULL, 0);
+./rasterio-1.1.5/rasterio/_err.c:4709:        return PyUnicode_FromUnicode(NULL, 0);
+./rasterio-1.1.5/rasterio/_example.c:18243:        return PyUnicode_FromUnicode(NULL, 0);
+./rasterio-1.1.5/rasterio/_io.c:56341:        return PyUnicode_FromUnicode(NULL, 0);
+./rasterio-1.1.5/rasterio/_shim1.c:22510:        return PyUnicode_FromUnicode(NULL, 0);
+./rasterio-1.1.5/rasterio/_shim20.c:23704:        return PyUnicode_FromUnicode(NULL, 0);
+./rasterio-1.1.5/rasterio/_shim21.c:23682:        return PyUnicode_FromUnicode(NULL, 0);
+./rasterio-1.1.5/rasterio/_shim30.c:23744:        return PyUnicode_FromUnicode(NULL, 0);
+./rasterio-1.1.5/rasterio/_warp.cpp:39907:        return PyUnicode_FromUnicode(NULL, 0);
+./rcssmin-1.0.6/rcssmin.c:1088:#define PyString_FromStringAndSize PyUnicode_FromUnicode
+./regex-2020.6.8/regex_2/_regex.c:18479:    buffer = PyUnicode_AsUnicode(string);
+./regex-2020.6.8/regex_2/_regex.c:18481:    return PyUnicode_FromUnicode(buffer + start, end - start);
+./regex-2020.6.8/regex_2/_regex.c:19372:            joiner = PyUnicode_FromUnicode(NULL, 0);
+./regex-2020.6.8/regex_2/_regex.c:19402:        return PyUnicode_FromUnicode(NULL, 0);
+./regex-2020.6.8/regex_2/_regex.c:9415:    result = PyUnicode_FromUnicode(codepoints, len);
+./regex-2020.6.8/regex_2/_regex.c:9425:    return PyUnicode_FromUnicode(buffer, len);
+./regex-2020.6.8/regex_3/_regex.c:18548:    buffer = PyUnicode_AsUnicode(string);
+./regex-2020.6.8/regex_3/_regex.c:18550:    return PyUnicode_FromUnicode(buffer + start, end - start);
+./regex-2020.6.8/regex_3/_regex.c:19457:            joiner = PyUnicode_FromUnicode(NULL, 0);
+./regex-2020.6.8/regex_3/_regex.c:19487:        return PyUnicode_FromUnicode(NULL, 0);
+./regex-2020.6.8/regex_3/_regex.c:9470:    result = PyUnicode_FromUnicode(codepoints, len);
+./regex-2020.6.8/regex_3/_regex.c:9504:    return PyUnicode_FromUnicode(buffer, len);
+./reportlab-3.5.42/src/rl_addons/renderPM/_renderPM.c:1088:		textlen = PyUnicode_GetSize(obj0);
+./reportlab-3.5.42/src/rl_addons/renderPM/_renderPM.c:1089:		utext = PyUnicode_AsUnicode(obj0);
+./reportlab-3.5.42/src/rl_addons/renderPM/_renderPM.c:868:		textlen = PyUnicode_GetSize(obj0);
+./reportlab-3.5.42/src/rl_addons/renderPM/_renderPM.c:869:		utext = PyUnicode_AsUnicode(obj0);
+./rjsmin-1.1.0/cext.h:241:    (PyUnicode_FromUnicode((Py_UNICODE *)data, length))
+./rjsmin-1.1.0/cext.h:245:#define PyUnicode_New(size, maxchar) PyUnicode_FromUnicode(NULL, size)
+./rjsmin-1.1.0/rjsmin.c:467:#define PyString_FromStringAndSize PyUnicode_FromUnicode
+./scandir-1.10.0/_scandir.c:1198:        path = PyUnicode_AsUnicode(self->path);
+./scandir-1.10.0/_scandir.c:1225:                                    PyUnicode_GetSize(self->name), "strict");
+./scandir-1.10.0/_scandir.c:1235:                                    PyUnicode_GetSize(self->path), "strict");
+./scandir-1.10.0/_scandir.c:47:#define PyUnicode_AsUnicodeAndSize(unicode, addr_length) \
+./scandir-1.10.0/_scandir.c:48:    PyUnicode_AsUnicode(unicode); *(addr_length) = PyUnicode_GetSize(unicode)
+./scandir-1.10.0/_scandir.c:797:        wide = PyUnicode_AsUnicodeAndSize(unicode, &length);
+./scandir-1.10.0/_scandir.c:985:    path = PyUnicode_AsUnicode(self->path);
+./scikit-image-0.17.2/skimage/_shared/transform.c:22103:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/draw/_draw.c:30396:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/feature/_cascade.cpp:111581:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/feature/_haar.cpp:34977:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/feature/_hessian_det_appx.c:21617:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/feature/_hoghistogram.c:21990:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/feature/_texture.c:112359:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/feature/brief_cy.c:22662:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/feature/censure_cy.c:18161:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/feature/corner_cy.c:26702:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/feature/orb_cy.c:107009:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/filters/_ctmf.c:24268:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/filters/_multiotsu.c:22687:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/filters/rank/bilateral_cy.c:30180:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/filters/rank/core_cy.c:35408:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/filters/rank/generic_cy.c:159956:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/filters/rank/percentile_cy.c:49859:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/future/graph/_ncut_cy.c:22198:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/graph/_mcp.c:36511:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/graph/_spath.c:22606:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/graph/heap.c:7577:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/graph/heap.c:7582:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
+./scikit-image-0.17.2/skimage/graph/old_heap.c:7577:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/graph/old_heap.c:7582:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
+./scikit-image-0.17.2/skimage/graph/save_heap.c:9827:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
+./scikit-image-0.17.2/skimage/measure/_ccomp.c:10656:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./scikit-image-0.17.2/skimage/measure/_find_contours_cy.c:22048:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/measure/_marching_cubes_classic_cy.c:43215:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/measure/_marching_cubes_lewiner_cy.c:36709:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/measure/_moments_cy.c:18260:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/measure/_pnpoly.c:22422:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/morphology/_convex_hull.c:21464:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/morphology/_extrema_cy.c:31409:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/morphology/_flood_fill_cy.c:31337:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/morphology/_max_tree.c:60416:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/morphology/_skeletonize_3d_cy.cpp:27725:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/morphology/_skeletonize_cy.c:23857:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/morphology/_watershed.c:22707:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/restoration/_denoise_cy.c:111273:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/restoration/_nl_means_denoising.c:35771:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/restoration/_unwrap_1d.c:17797:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/restoration/_unwrap_2d.c:17938:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/restoration/_unwrap_3d.c:17961:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/segmentation/_quickshift_cy.c:22523:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/segmentation/_remap.cpp:46960:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./scikit-image-0.17.2/skimage/segmentation/_remap.cpp:47187:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./scikit-image-0.17.2/skimage/segmentation/_slic.c:27680:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/segmentation/_watershed_cy.c:22718:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/segmentation/graph/_ncut_cy.c:22198:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/transform/_hough_transform.c:111481:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/transform/_radon_transform.c:25314:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/transform/_seam_carving.c:22674:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/transform/_warps_cy.c:108113:        return PyUnicode_FromUnicode(NULL, 0);
+./scikit-image-0.17.2/skimage/util/_remap.cpp:41438:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/_lib/_ccallback_c.c:5068:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/_lib/messagestream.c:4001:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/cluster/_hierarchy.c:37262:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/cluster/_optimal_leaf_ordering.c:26440:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/fftpack/convolve.c:23781:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/interpolate/_bspl.c:26140:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/interpolate/_ppoly.c:33916:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./scipy-1.4.1/scipy/interpolate/_ppoly.c:34079:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./scipy-1.4.1/scipy/interpolate/_ppoly.c:34587:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/interpolate/interpnd.c:29679:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/io/matlab/mio5_utils.c:18649:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./scipy-1.4.1/scipy/io/matlab/mio5_utils.c:18831:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./scipy-1.4.1/scipy/linalg/_decomp_update.c:39463:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./scipy-1.4.1/scipy/linalg/_solve_toeplitz.c:24346:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/linalg/cython_blas.c:29447:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/ndimage/src/_ni_label.c:32495:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/optimize/_bglu_dense.c:30808:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/optimize/_group_columns.c:22368:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/optimize/_lsq/givens_elimination.c:18431:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/optimize/_trlib/_trlib.c:25060:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/signal/_max_len_seq_inner.c:21185:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/signal/_peak_finding_utils.c:24242:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/signal/_sosfilt.c:25253:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/signal/_upfirdn_apply.c:37898:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/sparse/_csparsetools.c:34427:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./scipy-1.4.1/scipy/sparse/_csparsetools.c:36319:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/sparse/csgraph/_flow.c:24569:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/sparse/csgraph/_matching.c:22689:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/sparse/csgraph/_min_spanning_tree.c:22149:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/sparse/csgraph/_reordering.c:26611:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/sparse/csgraph/_shortest_path.c:35193:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/spatial/_hausdorff.c:21697:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/spatial/_voronoi.c:22045:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/spatial/ckdtree.cxx:37542:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./scipy-1.4.1/scipy/spatial/ckdtree.cxx:38960:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/spatial/qhull.c:48048:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./scipy-1.4.1/scipy/spatial/qhull.c:48267:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./scipy-1.4.1/scipy/spatial/qhull.c:49606:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/special/_test_round.c:19390:        return PyUnicode_FromUnicode(NULL, 0);
+./scipy-1.4.1/scipy/stats/_stats.c:39713:        return PyUnicode_FromUnicode(NULL, 0);
+./simplejson-3.17.0/simplejson/_speedups.c:1099:            chunk = PyUnicode_FromUnicode(&((const Py_UNICODE *)buf)[end], next - end);
+./simplejson-3.17.0/simplejson/_speedups.c:2051:    numstr = PyUnicode_FromUnicode(&((Py_UNICODE *)str)[start], idx - start);
+./simplejson-3.17.0/simplejson/_speedups.c:3335:    JSON_EmptyUnicode = PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/gold.cpp:51773:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/lexeme.cpp:31823:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/matcher/dependencymatcher.cpp:34106:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/matcher/matcher.cpp:43425:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/matcher/phrasematcher.cpp:31603:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/morphology.cpp:25000:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./spacy-2.2.4/spacy/pipeline/morphologizer.cpp:31409:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87830:  __pyx_ustring__374 = PyUnicode_FromUnicode(__pyx_k__375, (sizeof(__pyx_k__375) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__374)) __PYX_ERR(0, 1443, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87832:  __pyx_ustring__376 = PyUnicode_FromUnicode(__pyx_k__377, (sizeof(__pyx_k__377) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__376)) __PYX_ERR(0, 1443, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87834:  __pyx_ustring__378 = PyUnicode_FromUnicode(__pyx_k__379, (sizeof(__pyx_k__379) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__378)) __PYX_ERR(0, 1443, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87836:  __pyx_ustring__380 = PyUnicode_FromUnicode(__pyx_k__381, (sizeof(__pyx_k__381) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__380)) __PYX_ERR(0, 1443, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87838:  __pyx_ustring__382 = PyUnicode_FromUnicode(__pyx_k__383, (sizeof(__pyx_k__383) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__382)) __PYX_ERR(0, 1443, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87840:  __pyx_ustring__384 = PyUnicode_FromUnicode(__pyx_k__385, (sizeof(__pyx_k__385) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__384)) __PYX_ERR(0, 1443, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87842:  __pyx_ustring__386 = PyUnicode_FromUnicode(__pyx_k__387, (sizeof(__pyx_k__387) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__386)) __PYX_ERR(0, 1443, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87852:  __pyx_ustring__388 = PyUnicode_FromUnicode(__pyx_k__389, (sizeof(__pyx_k__389) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__388)) __PYX_ERR(0, 1444, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87854:  __pyx_ustring__390 = PyUnicode_FromUnicode(__pyx_k__391, (sizeof(__pyx_k__391) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__390)) __PYX_ERR(0, 1444, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87856:  __pyx_ustring__392 = PyUnicode_FromUnicode(__pyx_k__393, (sizeof(__pyx_k__393) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__392)) __PYX_ERR(0, 1444, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87858:  __pyx_ustring__394 = PyUnicode_FromUnicode(__pyx_k__395, (sizeof(__pyx_k__395) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__394)) __PYX_ERR(0, 1444, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87860:  __pyx_ustring__396 = PyUnicode_FromUnicode(__pyx_k__397, (sizeof(__pyx_k__397) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__396)) __PYX_ERR(0, 1444, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87862:  __pyx_ustring__398 = PyUnicode_FromUnicode(__pyx_k__399, (sizeof(__pyx_k__399) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__398)) __PYX_ERR(0, 1444, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87864:  __pyx_ustring__400 = PyUnicode_FromUnicode(__pyx_k__401, (sizeof(__pyx_k__401) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__400)) __PYX_ERR(0, 1444, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87866:  __pyx_ustring__402 = PyUnicode_FromUnicode(__pyx_k__403, (sizeof(__pyx_k__403) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__402)) __PYX_ERR(0, 1444, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87868:  __pyx_ustring__404 = PyUnicode_FromUnicode(__pyx_k__405, (sizeof(__pyx_k__405) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__404)) __PYX_ERR(0, 1444, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87870:  __pyx_ustring__406 = PyUnicode_FromUnicode(__pyx_k__407, (sizeof(__pyx_k__407) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__406)) __PYX_ERR(0, 1444, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87872:  __pyx_ustring__408 = PyUnicode_FromUnicode(__pyx_k__409, (sizeof(__pyx_k__409) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__408)) __PYX_ERR(0, 1444, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87874:  __pyx_ustring__410 = PyUnicode_FromUnicode(__pyx_k__411, (sizeof(__pyx_k__411) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__410)) __PYX_ERR(0, 1444, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87876:  __pyx_ustring__412 = PyUnicode_FromUnicode(__pyx_k__413, (sizeof(__pyx_k__413) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__412)) __PYX_ERR(0, 1444, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87886:  __pyx_ustring__414 = PyUnicode_FromUnicode(__pyx_k__415, (sizeof(__pyx_k__415) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__414)) __PYX_ERR(0, 1445, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87888:  __pyx_ustring__416 = PyUnicode_FromUnicode(__pyx_k__417, (sizeof(__pyx_k__417) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__416)) __PYX_ERR(0, 1445, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87890:  __pyx_ustring__418 = PyUnicode_FromUnicode(__pyx_k__419, (sizeof(__pyx_k__419) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__418)) __PYX_ERR(0, 1445, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87892:  __pyx_ustring__420 = PyUnicode_FromUnicode(__pyx_k__421, (sizeof(__pyx_k__421) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__420)) __PYX_ERR(0, 1445, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87894:  __pyx_ustring__422 = PyUnicode_FromUnicode(__pyx_k__423, (sizeof(__pyx_k__423) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__422)) __PYX_ERR(0, 1445, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87896:  __pyx_ustring__424 = PyUnicode_FromUnicode(__pyx_k__425, (sizeof(__pyx_k__425) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__424)) __PYX_ERR(0, 1445, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87898:  __pyx_ustring__426 = PyUnicode_FromUnicode(__pyx_k__427, (sizeof(__pyx_k__427) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__426)) __PYX_ERR(0, 1445, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87900:  __pyx_ustring__428 = PyUnicode_FromUnicode(__pyx_k__429, (sizeof(__pyx_k__429) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__428)) __PYX_ERR(0, 1445, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87902:  __pyx_ustring__430 = PyUnicode_FromUnicode(__pyx_k__431, (sizeof(__pyx_k__431) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__430)) __PYX_ERR(0, 1445, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87904:  __pyx_ustring__432 = PyUnicode_FromUnicode(__pyx_k__433, (sizeof(__pyx_k__433) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__432)) __PYX_ERR(0, 1445, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87906:  __pyx_ustring__434 = PyUnicode_FromUnicode(__pyx_k__435, (sizeof(__pyx_k__435) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__434)) __PYX_ERR(0, 1445, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87908:  __pyx_ustring__436 = PyUnicode_FromUnicode(__pyx_k__437, (sizeof(__pyx_k__437) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__436)) __PYX_ERR(0, 1445, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87910:  __pyx_ustring__438 = PyUnicode_FromUnicode(__pyx_k__439, (sizeof(__pyx_k__439) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__438)) __PYX_ERR(0, 1445, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87920:  __pyx_ustring__440 = PyUnicode_FromUnicode(__pyx_k__441, (sizeof(__pyx_k__441) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__440)) __PYX_ERR(0, 1446, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87922:  __pyx_ustring__442 = PyUnicode_FromUnicode(__pyx_k__443, (sizeof(__pyx_k__443) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__442)) __PYX_ERR(0, 1446, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87924:  __pyx_ustring__444 = PyUnicode_FromUnicode(__pyx_k__445, (sizeof(__pyx_k__445) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__444)) __PYX_ERR(0, 1446, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87926:  __pyx_ustring__446 = PyUnicode_FromUnicode(__pyx_k__447, (sizeof(__pyx_k__447) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__446)) __PYX_ERR(0, 1446, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87928:  __pyx_ustring__448 = PyUnicode_FromUnicode(__pyx_k__449, (sizeof(__pyx_k__449) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__448)) __PYX_ERR(0, 1446, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87930:  __pyx_ustring__450 = PyUnicode_FromUnicode(__pyx_k__451, (sizeof(__pyx_k__451) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__450)) __PYX_ERR(0, 1446, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87932:  __pyx_ustring__452 = PyUnicode_FromUnicode(__pyx_k__453, (sizeof(__pyx_k__453) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__452)) __PYX_ERR(0, 1446, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87934:  __pyx_ustring__454 = PyUnicode_FromUnicode(__pyx_k__455, (sizeof(__pyx_k__455) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__454)) __PYX_ERR(0, 1446, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87936:  __pyx_ustring__456 = PyUnicode_FromUnicode(__pyx_k__457, (sizeof(__pyx_k__457) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__456)) __PYX_ERR(0, 1446, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87938:  __pyx_ustring__458 = PyUnicode_FromUnicode(__pyx_k__459, (sizeof(__pyx_k__459) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__458)) __PYX_ERR(0, 1446, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87940:  __pyx_ustring__460 = PyUnicode_FromUnicode(__pyx_k__461, (sizeof(__pyx_k__461) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__460)) __PYX_ERR(0, 1446, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87942:  __pyx_ustring__462 = PyUnicode_FromUnicode(__pyx_k__463, (sizeof(__pyx_k__463) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__462)) __PYX_ERR(0, 1446, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87944:  __pyx_ustring__464 = PyUnicode_FromUnicode(__pyx_k__465, (sizeof(__pyx_k__465) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__464)) __PYX_ERR(0, 1446, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87954:  __pyx_ustring__466 = PyUnicode_FromUnicode(__pyx_k__467, (sizeof(__pyx_k__467) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__466)) __PYX_ERR(0, 1447, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87956:  __pyx_ustring__468 = PyUnicode_FromUnicode(__pyx_k__469, (sizeof(__pyx_k__469) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__468)) __PYX_ERR(0, 1447, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87958:  __pyx_ustring__470 = PyUnicode_FromUnicode(__pyx_k__471, (sizeof(__pyx_k__471) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__470)) __PYX_ERR(0, 1447, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87960:  __pyx_ustring__472 = PyUnicode_FromUnicode(__pyx_k__473, (sizeof(__pyx_k__473) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__472)) __PYX_ERR(0, 1447, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87962:  __pyx_ustring__474 = PyUnicode_FromUnicode(__pyx_k__475, (sizeof(__pyx_k__475) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__474)) __PYX_ERR(0, 1447, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87964:  __pyx_ustring__476 = PyUnicode_FromUnicode(__pyx_k__477, (sizeof(__pyx_k__477) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__476)) __PYX_ERR(0, 1447, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87966:  __pyx_ustring__478 = PyUnicode_FromUnicode(__pyx_k__479, (sizeof(__pyx_k__479) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__478)) __PYX_ERR(0, 1447, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87968:  __pyx_ustring__480 = PyUnicode_FromUnicode(__pyx_k__481, (sizeof(__pyx_k__481) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__480)) __PYX_ERR(0, 1447, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87970:  __pyx_ustring__482 = PyUnicode_FromUnicode(__pyx_k__483, (sizeof(__pyx_k__483) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__482)) __PYX_ERR(0, 1447, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87972:  __pyx_ustring__484 = PyUnicode_FromUnicode(__pyx_k__485, (sizeof(__pyx_k__485) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__484)) __PYX_ERR(0, 1447, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87974:  __pyx_ustring__486 = PyUnicode_FromUnicode(__pyx_k__487, (sizeof(__pyx_k__487) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__486)) __PYX_ERR(0, 1447, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87976:  __pyx_ustring__488 = PyUnicode_FromUnicode(__pyx_k__489, (sizeof(__pyx_k__489) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__488)) __PYX_ERR(0, 1447, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:87978:  __pyx_ustring__490 = PyUnicode_FromUnicode(__pyx_k__491, (sizeof(__pyx_k__491) / sizeof(Py_UNICODE))-1); if (unlikely(!__pyx_ustring__490)) __PYX_ERR(0, 1447, __pyx_L1_error)
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:96413:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./spacy-2.2.4/spacy/pipeline/pipes.cpp:96931:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/strings.cpp:7593:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/syntax/_beam_utils.cpp:41585:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/syntax/_parser_model.cpp:46950:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/syntax/arc_eager.cpp:47245:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/syntax/nn_parser.cpp:57180:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/syntax/nonproj.cpp:30022:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./spacy-2.2.4/spacy/syntax/nonproj.cpp:30518:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/syntax/stateclass.cpp:31039:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/syntax/transition_system.cpp:38117:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/tokenizer.cpp:35784:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/tokenizer.cpp:35789:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
+./spacy-2.2.4/spacy/tokenizer.cpp:37395:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/tokens/_retokenize.cpp:34661:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/tokens/_retokenize.cpp:34666:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
+./spacy-2.2.4/spacy/tokens/_retokenize.cpp:35374:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/tokens/doc.cpp:52049:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./spacy-2.2.4/spacy/tokens/doc.cpp:55417:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/tokens/span.cpp:41673:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/tokens/token.cpp:41010:        return PyUnicode_FromUnicode(NULL, 0);
+./spacy-2.2.4/spacy/vocab.cpp:40721:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/_exponential_smoothers.c:26911:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/_innovations.c:19677:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/_stl.c:25946:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/innovations/_arma_innovations.c:32563:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/kalmanf/kalman_loglike.c:26175:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/regime_switching/_hamilton_filter.c:26950:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/regime_switching/_kim_smoother.c:25414:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_filters/_conventional.c:26163:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_filters/_inversions.c:31841:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_filters/_univariate.c:30137:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_filters/_univariate_diffuse.c:27313:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_initialization.c:33059:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_kalman_filter.c:79623:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_kalman_smoother.c:51484:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_representation.c:67560:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_simulation_smoother.c:53768:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_smoothers/_alternative.c:27600:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_smoothers/_classical.c:27327:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_smoothers/_conventional.c:27750:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_smoothers/_univariate.c:26936:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_smoothers/_univariate_diffuse.c:32990:        return PyUnicode_FromUnicode(NULL, 0);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_tools.c:52190:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_tools.c:52442:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./statsmodels-0.11.1/statsmodels/tsa/statespace/_tools.c:53892:        return PyUnicode_FromUnicode(NULL, 0);
+./tables-3.6.1/tables/utilsextension.c:22813:        return PyUnicode_FromUnicode(NULL, 0);
+./tables-3.6.1/tables/utilsextension.c:23443:        return PyUnicode_FromUnicode(NULL, 0);
+./thinc-7.4.1/thinc/linear/linear.cpp:24848:        return PyUnicode_FromUnicode(NULL, 0);
+./thinc-7.4.1/thinc/neural/ops.cpp:66979:        return PyUnicode_FromUnicode(NULL, 0);
+./thriftpy-0.3.9/thriftpy/protocol/cybin/cybin.c:9271:        return PyUnicode_FromUnicode(NULL, 0);
+./thriftpy2-0.4.11/thriftpy2/protocol/cybin/cybin.c:10969:        return PyUnicode_FromUnicode(NULL, 0);
+./uamqp-1.2.8/uamqp/c_uamqp.c:106039:        return PyUnicode_FromUnicode(NULL, 0);
+./uvloop-0.14.0/uvloop/loop.c:162028:        return PyUnicode_FromUnicode(NULL, 0);
+./uvloop-0.14.0/uvloop/loop.c:164810:    result_uval = PyUnicode_FromUnicode(NULL, result_ulength);
+./uvloop-0.14.0/uvloop/loop.c:166801:    uval = PyUnicode_FromUnicode(NULL, ulength);
+./uvloop-0.14.0/uvloop/loop.c:167057:        return PyUnicode_FromUnicode(NULL, 0);
+./weighted_levenshtein-0.2.1/weighted_levenshtein/clev.c:22209:        return PyUnicode_FromUnicode(NULL, 0);
+./wordcloud-1.7.0/wordcloud/query_integral_image.c:18051:        return PyUnicode_FromUnicode(NULL, 0);
+./yarl-1.4.2/yarl/_quoting.c:9969:        return PyUnicode_FromUnicode(NULL, 0);
+./yarl-1.4.2/yarl/_quoting.c:9974:    return PyUnicode_FromUnicode(PyUnicode_AS_UNICODE(text)+start, stop-start);
+./yarl-1.4.2/yarl/_quoting.c:9996:        return PyUnicode_FromUnicode(NULL, 0);

@@ -46,5 +46,5 @@ $ cat deprecated-files | while read line; do tar xf $line; done
 ## 5. grepping deprecated APIs.
 
 ```
-$ rg -w -f deprecated-apis ./* | grep -v __Pyx_PyUnicode > deprecated-use
+$ rg -wn -f deprecated-apis --ignore-file deprecated-apis ./* | grep -v __Pyx_PyUnicode | sort > deprecated-use
 ```
