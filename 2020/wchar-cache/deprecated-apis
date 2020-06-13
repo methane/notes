@@ -4,3 +4,11 @@ PyUnicode_TransformDecimalToASCII
 PyUnicode_AsUnicodeAndSize
 PyUnicode_AsUnicodeCopy
 PyUnicode_GetSize
+PyUnicode_GetMax
+Py_UNICODE_GET_SIZE
+Py_UNICODE_GET_DATA_SIZE
+Py_UNICODE_AS_UNICODE
+Py_UNICODE_AS_DATA
+Py_UNICODE_MATCH
+Py_UNICODE_COPY
+Py_UNICODE_FILL

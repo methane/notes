@@ -31,7 +31,7 @@ A list of deprecated APIs: [deprecated-apis](./deprecated-apis)
 Use ripgrep to search:
 
 ```
-$ rg -zl -f deprecated-apis *.zip *.tar.gz *.bz2 > deprecated-files
+$ rg -zl -f deprecated-apis *.zip *.tar.gz *.bz2 | sort > deprecated-files
 ```
 
 
