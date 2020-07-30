@@ -14,38 +14,38 @@ var (
 	DefaultLogger *zap.SugaredLogger
 )
 
-func initLoggers() {
-	ec := zapcore.EncoderConfig{
-		// Keys can be anything except the empty string.
-		TimeKey:        "T",
-		LevelKey:       "L",
-		NameKey:        "N",
-		CallerKey:      "C",
-		MessageKey:     "M",
-		StacktraceKey:  "S",
-		LineEnding:     zapcore.DefaultLineEnding,
-		EncodeLevel:    zapcore.CapitalColorLevelEncoder,
-		EncodeTime:     zapcore.ISO8601TimeEncoder,
-		EncodeDuration: zapcore.StringDurationEncoder,
-		EncodeCaller:   zapcore.ShortCallerEncoder,
-	}
+func initLoggers() func() {
+	consoleEnc := zap.NewDevelopmentEncoderConfig()
+	core1 := zapcore.NewCore(zapcore.NewConsoleEncoder(consoleEnc), os.Stdout, zap.DebugLevel)
 
-	core := zapcore.NewCore(zapcore.NewConsoleEncoder(ec), os.Stdout, zap.DebugLevel)
+	sink, closer, err := zap.Open("/tmp/zaplog.out")
+	if err != nil {
+		panic(err)
+	}
+	fileEnc := zap.NewProductionEncoderConfig()
+	core2 := zapcore.NewCore(zapcore.NewJSONEncoder(fileEnc), sink, zap.DebugLevel)
+
+	core := zapcore.NewTee(core1, core2)
+
 	options := []zap.Option{
 		zap.AddStacktrace(zap.WarnLevel),
 		zap.WithCaller(true),
 	}
 	logger := zap.New(core, options...)
+
 	DebugLogger = logger.Sugar()
 	DefaultLogger = logger.WithOptions(zap.IncreaseLevel(zap.InfoLevel)).Sugar()
+	zap.ReplaceGlobals(logger)
+	zap.RedirectStdLog(logger)
 
-	zap.ReplaceGlobals(DefaultLogger.Desugar())
+	return func() {
+		logger.Sync()
+		closer()
+	}
 }
 
 func main() {
-	initLoggers()
-
-	defer DefaultLogger.Sync()
+	defer initLoggers()()
 
 	DefaultLogger.Debug("debug log from default logger")
 	DefaultLogger.Error("error log from default logger")
