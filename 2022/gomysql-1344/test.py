@@ -4,7 +4,6 @@ import  random
 import time
 
 import pymysql
-from mydb import MySQL
 
 host = 'localhost'
 user='root'
@@ -315,8 +314,9 @@ def getfulldate():
         surp.append(root)
 
         return str(json.dumps(surp))
-cycles = 0
-while True:
+
+for i in range(10):
+    t0 = time.time()
     insertpatient()
     bookapointments()
     getpending()
@@ -325,6 +325,6 @@ while True:
     gettop()
     getdatab()
     getfulldate()
-    print(cycles)
-    cycles += 1
+    t1 = time.time()
+    print(i, t1-t0)
     time.sleep(2)
