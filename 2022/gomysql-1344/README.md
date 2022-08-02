@@ -38,3 +38,7 @@ $ go run main.go
  83.733427ms 2.045798183s 165.99123ms 2.435256703s 616.567494ms 174.225829ms 3.548855ms 62.082926ms
 ...
 ```
+
+getdata() and getdatab() are slow.
+
+

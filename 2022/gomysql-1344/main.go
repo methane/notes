@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"math/rand"
+	"runtime"
 	"time"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -22,7 +23,7 @@ func must(err error) {
 
 func main() {
 	var err error
-	db, err = sql.Open("mysql", "root:Asd123dsa@tcp(127.0.0.1:3306)/nahry")
+	db, err = sql.Open("mysql", "root:Asd123dsa@tcp(127.0.0.1:3306)/nahry?interpolateParams=true")
 	must(err)
 	_, err = db.Exec("select 1")
 	must(err)
@@ -47,7 +48,15 @@ func main() {
 		t8 := time.Now()
 		elapsed := t8.Sub(t0)
 		fmt.Printf("%d %v\n", i, elapsed)
-		fmt.Printf(" %v %v %v %v %v %v %v %v\n", t8.Sub(t7), t7.Sub(t6), t6.Sub(t5), t5.Sub(t4), t4.Sub(t3), t3.Sub(t2), t2.Sub(t1), t1.Sub(t0))
+		fmt.Printf(" %v %v %v %v %v %v %v %v\n",
+			t1.Sub(t0),
+			t2.Sub(t1),
+			t3.Sub(t2),
+			t4.Sub(t3),
+			t5.Sub(t4),
+			t6.Sub(t5),
+			t7.Sub(t6),
+			t8.Sub(t7))
 
 		time.Sleep(2 * time.Second)
 	}
@@ -313,80 +322,44 @@ func getdone() string {
 
 func getdata() string {
 
+	var t0, t1 time.Time
+	t0 = time.Now()
 	cID := 8
+
+	timing := func() {
+		t1 = time.Now()
+		_, _, line, _ := runtime.Caller(1)
+		fmt.Println(line, t1.Sub(t0))
+		t0 = t1
+	}
 
 	currentTime := time.Now().Format("2006-01-02")
 
-	result, err := db.Prepare("select count(1) as temp from patientvisit where state = 0 and forWhen = date(?) and cID = ?   ")
-	if err != nil {
-		return "0"
-
-	}
-	defer result.Close()
 	var tpen int
-	err = result.QueryRow(currentTime, cID).Scan(&tpen) // WHERE number = 13
-	if err != nil {
-		return "0"
-	}
+	err := db.QueryRow("select count(1) as temp from patientvisit where state = 0 and forWhen = date(?) and cID = ?   ", currentTime, cID).Scan(&tpen)
+	must(err)
 
-	result, err = db.Prepare("select count(1) as temp from patientvisit where state = 1 and forWhen = date(?) and cID = ?   ")
-	if err != nil {
-		return "0"
+	timing()
 
-	}
-	defer result.Close()
 	var tcomp int
-	err = result.QueryRow(currentTime, cID).Scan(&tcomp) // WHERE number = 13
-	if err != nil {
-		return "0"
-	}
+	err = db.QueryRow("select count(1) as temp from patientvisit where state = 1 and forWhen = date(?) and cID = ?   ", currentTime, cID).Scan(&tcomp)
+	must(err)
+	timing()
 
-	result, err = db.Prepare("select count(1) as temp from patientvisit where state = 1 and forWhen = date(?) and cID = ?   ")
-	if err != nil {
-		return "0"
-
-	}
-	defer result.Close()
-	var tnon int
-	err = result.QueryRow(currentTime, cID).Scan(&tnon) // WHERE number = 13
-	if err != nil {
-		return "0"
-	}
-
-	result, err = db.Prepare("select count(1) as temp from patientvisit where state = 1 and  cID = ? ")
-	if err != nil {
-		return "0"
-
-	}
-	defer result.Close()
 	var compa int
-	err = result.QueryRow(cID).Scan(&compa) // WHERE number = 13
-	if err != nil {
-		return "0"
-	}
-	result, err = db.Prepare("select count(1) as temp from patientvisit where   cID = ?")
-	if err != nil {
-		return "0"
+	err = db.QueryRow("select count(1) as temp from patientvisit where state = 1 and  cID = ? ", cID).Scan(&compa)
+	must(err)
+	timing()
 
-	}
-	defer result.Close()
 	var allapp int
-	err = result.QueryRow(cID).Scan(&allapp) // WHERE number = 13
-	if err != nil {
-		return "0"
-	}
-	result, err = db.Prepare("select count(1) as temp from profile where aID = 4 and   cID = ? ")
-	if err != nil {
-		return "0"
+	err = db.QueryRow("select count(1) as temp from patientvisit where   cID = ?", cID).Scan(&allapp)
+	must(err)
+	timing()
 
-	}
-	defer result.Close()
 	var allpa int
-	err = result.QueryRow(cID).Scan(&allpa) // WHERE number = 13
-	if err != nil {
-
-		return "0"
-	}
+	err = db.QueryRow("select count(1) as temp from profile where aID = 4 and   cID = ? ", cID).Scan(&allpa)
+	must(err)
+	timing()
 
 	return "c.JSON()"
 }
