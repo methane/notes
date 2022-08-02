@@ -4,26 +4,50 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
-	_ "github.com/go-sql-driver/mysql"
 	"math/rand"
 	"time"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 var (
-	db, err = sql.Open("mysql", "nahry:yba6pJ8Fs5CjTjXE@/nahry")
+	db *sql.DB
 )
 
-func main() {
-	for {
-		insertpatient()
-		bookapointments()
-		getpending()
-		getdone()
-		getdata()
-		gettop()
-		getdatab()
+func must(err error) {
+	if err != nil {
+		panic(err)
+	}
+}
 
+func main() {
+	var err error
+	db, err = sql.Open("mysql", "root:Asd123dsa@tcp(127.0.0.1:3306)/nahry")
+	must(err)
+	_, err = db.Exec("select 1")
+	must(err)
+
+	for i := 0; i < 10; i++ {
+		t0 := time.Now()
+		insertpatient()
+		t1 := time.Now()
+		bookapointments()
+		t2 := time.Now()
+		getpending()
+		t3 := time.Now()
+		getdone()
+		t4 := time.Now()
+		getdata()
+		t5 := time.Now()
+		gettop()
+		t6 := time.Now()
+		getdatab()
+		t7 := time.Now()
 		getfulldate()
+		t8 := time.Now()
+		elapsed := t8.Sub(t0)
+		fmt.Printf("%d %v\n", i, elapsed)
+		fmt.Printf(" %v %v %v %v %v %v %v %v\n", t8.Sub(t7), t7.Sub(t6), t6.Sub(t5), t5.Sub(t4), t4.Sub(t3), t3.Sub(t2), t2.Sub(t1), t1.Sub(t0))
 
 		time.Sleep(2 * time.Second)
 	}
@@ -41,7 +65,6 @@ func getfulldate() string {
 	defer result.Close()
 	if err != nil {
 		fmt.Println("error")
-
 	}
 
 	rows, err := result.Query(pid)
@@ -148,12 +171,12 @@ func getfulldate() string {
 		tableDatas = append(tableDatas, entry)
 	}
 	alldata := [][]map[string]interface{}{tableData, tableDatas}
-	dat, err := json.Marshal(alldata)
+	_, err = json.Marshal(alldata)
 	if err != nil {
 		return "0"
 	}
 
-	fmt.Println(dat)
+	//	fmt.Println(dat)
 	return "0"
 }
 func barcodegen() int {
@@ -172,9 +195,7 @@ func barcodegen() int {
 
 		inse, err := result.Exec(myradn) // I
 
-		if err != nil {
-			fmt.Println(err.Error())
-		}
+		must(err)
 		count, err := inse.RowsAffected()
 
 		if count == 0 {
@@ -228,7 +249,8 @@ func getpending() string {
 		tableData = append(tableData, entry)
 	}
 	jsonData, err := json.Marshal(tableData)
-	fmt.Println(jsonData)
+	//fmt.Println(jsonData)
+	_ = jsonData
 	if err != nil {
 		return "err"
 	}
@@ -283,7 +305,8 @@ func getdone() string {
 	if err != nil {
 		return "err"
 	}
-	fmt.Println(jsonData)
+	//fmt.Println(jsonData)
+	_ = jsonData
 
 	return "c.SendString(string(jsonData))"
 }
@@ -417,7 +440,8 @@ func gettop() string {
 	if err != nil {
 		return "err"
 	}
-	fmt.Println(jsonData)
+	//fmt.Println(jsonData)
+	_ = jsonData
 
 	return "c.SendString(string(jsonData))"
 
@@ -494,12 +518,9 @@ func insertpatient() string {
 
 	religion := ""
 	result, err := db.Prepare("select rgID from religion where rName = ?")
-
+	must(err)
 	defer result.Close()
-	if err != nil {
-		return "0"
 
-	}
 	var rgID int64
 	err = result.QueryRow(religion, cID).Scan(&rgID) // WHERE number = 13
 	if err != nil {
