@@ -1,0 +1,73 @@
+commit 4cef1f77f0731ef5f144ddf6ebf17e495303f1fd
+Author: Inada Naoki <songofacandy@gmail.com>
+Date:   2023-04-06 17:20:36 +0900
+
+    exp: marshalにsmall refを作ってpycのサイズを観察する
+
+diff --git a/Python/marshal.c b/Python/marshal.c
+index 2966139cec..156e1bf3af 100644
+--- a/Python/marshal.c
++++ b/Python/marshal.c
+@@ -59,6 +59,7 @@ module marshal
+ #define TYPE_STRING             's'
+ #define TYPE_INTERNED           't'
+ #define TYPE_REF                'r'
++#define TYPE_SMALL_REF          'R'
+ #define TYPE_TUPLE              '('
+ #define TYPE_LIST               '['
+ #define TYPE_DICT               '{'
+@@ -316,8 +317,15 @@ w_ref(PyObject *v, char *flag, WFILE *p)
+         w = (int)(uintptr_t)entry->value;
+         /* we don't store "long" indices in the dict */
+         assert(0 <= w && w <= 0x7fffffff);
+-        w_byte(TYPE_REF, p);
+-        w_long(w, p);
++        if (w < 256) {
++        //if (false) {
++            w_byte(TYPE_SMALL_REF, p);
++            w_byte((unsigned char)w, p);
++        }
++        else {
++            w_byte(TYPE_REF, p);
++            w_long(w, p);
++        }
+         return 1;
+     } else {
+         size_t s = p->hashtable->nentries;
+@@ -1464,8 +1472,12 @@ r_object(RFILE *p)
+         retval = v;
+         break;
+ 
++    case TYPE_SMALL_REF:
++        n = (unsigned char) r_byte(p);
++        goto _read_ref;
+     case TYPE_REF:
+         n = r_long(p);
++    _read_ref:
+         if (n < 0 || n >= PyList_GET_SIZE(p->refs)) {
+             if (n == -1 && PyErr_Occurred())
+                 break;
+diff --git a/Tools/build/umarshal.py b/Tools/build/umarshal.py
+index f61570cbaf..82f442fa02 100644
+--- a/Tools/build/umarshal.py
++++ b/Tools/build/umarshal.py
+@@ -23,6 +23,7 @@ class Type:
+     STRING              = ord('s')
+     INTERNED            = ord('t')
+     REF                 = ord('r')
++    SMALL_REF           = ord('R')
+     TUPLE               = ord('(')
+     LIST                = ord('[')
+     DICT                = ord('{')
+@@ -296,6 +297,11 @@ def R_REF(obj: Any) -> Any:
+             retval = self.refs[n]
+             assert retval is not None
+             return retval
++        elif type == Type.SMALL_REF:
++            n = self.r_byte()
++            retval = self.refs[n]
++            assert retval is not None
++            return retval
+         else:
+             breakpoint()
+             raise AssertionError(f"Unknown type {type} {chr(type)!r}")
