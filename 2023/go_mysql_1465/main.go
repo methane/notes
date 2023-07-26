@@ -46,8 +46,12 @@ func main() {
 	// rows, err := db.Query(query, true)
 
 	// Works
-	query := "SELECT * FROM test_table WHERE json->'$.alive' = CAST(? AS JSON)"
-	rows, err := db.Query(query, "true") // Not true, but "true"!
+	// query := "SELECT * FROM test_table WHERE json->'$.alive' = CAST(? AS JSON)"
+	// rows, err := db.Query(query, "true") // Not true, but "true"!
+
+	// Also works
+	query := "SELECT * FROM test_table WHERE CAST(json->'$.alive' AS UNSIGNED) = ?"
+	rows, err := db.Query(query, true)
 
 	must(err)
 
