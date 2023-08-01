@@ -3,6 +3,7 @@
 package main
 
 import (
+	"encoding/hex"
 	"flag"
 	"fmt"
 	"net"
@@ -48,11 +49,15 @@ func (p *proxy) run(toClient *net.UDPConn) {
 		n, addr, err := p.serverConn.ReadFromUDP(buff)
 		must(err)
 		fmt.Printf("s->c: received %d bytes from %s\n", n, addr)
-		fmt.Printf("s->c: data: %q\n", string(buff[:n]))
+		fmt.Println(hex.Dump(buff[:n]))
+		// fmt.Printf("s->c: data: %q\n", string(buff[:n]))
 
-		n, err = toClient.WriteToUDP(buff[:n], p.clientAddr)
+		sent, err := toClient.WriteToUDP(buff[:n], p.clientAddr)
 		must(err)
-		fmt.Printf("s->c: sent %d bytes to %s\n", n, p.clientAddr)
+		if sent != n {
+			panic("sent != n")
+		}
+		// fmt.Printf("s->c: sent %d bytes to %s\n", n, p.clientAddr)
 	}
 }
 
@@ -74,6 +79,7 @@ func main() {
 		n, addr, err := clientConn.ReadFromUDP(buff)
 		must(err)
 		fmt.Printf("received %d bytes from %s\n", n, addr)
+		fmt.Println(hex.Dump(buff[:n]))
 
 		mProxy.Lock()
 		px, ok := proxyMap[addr.String()]
@@ -96,8 +102,11 @@ func main() {
 			go px.run(clientConn)
 		}
 
-		n, err = px.serverConn.Write(buff[:n])
+		sent, err := px.serverConn.Write(buff[:n])
 		must(err)
-		fmt.Printf("sent %d bytes (%s => %s)\n", n, px.serverConn.LocalAddr(), px.serverConn.RemoteAddr())
+		// fmt.Printf("sent %d bytes (%s => %s)\n", n, px.serverConn.LocalAddr(), px.serverConn.RemoteAddr())
+		if sent != n {
+			panic("sent != n")
+		}
 	}
 }
