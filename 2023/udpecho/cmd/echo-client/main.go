@@ -14,11 +14,10 @@ func must(err error) {
 }
 
 func main() {
-	host := flag.String("host", "localhost", "host to connect")
-	port := flag.Int("port", 7000, "port to connect")
+	target := flag.String("target", "localhost:7000", "target to proxy")
 	flag.Parse()
 
-	conn, err := net.Dial("udp", fmt.Sprintf("%s:%d", *host, *port))
+	conn, err := net.Dial("udp", *target)
 	must(err)
 	defer conn.Close()
 	fmt.Printf("connected to %s from %s\n", conn.RemoteAddr(), conn.LocalAddr())
