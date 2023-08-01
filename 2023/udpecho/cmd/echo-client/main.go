@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"net"
+	"os"
 	"time"
 )
 
@@ -24,11 +25,13 @@ func main() {
 
 	uconn := conn.(*net.UDPConn)
 
+	msg := []byte(fmt.Sprintf("hello, from %d", os.Getpid()))
+	buff := make([]byte, 100)
+
 	for {
 		time.Sleep(time.Second * 3)
-		conn.Write([]byte("hello"))
+		conn.Write(msg)
 
-		buff := make([]byte, 100)
 		n, addr, err := uconn.ReadFromUDP(buff)
 		must(err)
 

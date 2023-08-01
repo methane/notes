@@ -6,6 +6,7 @@ import (
 	"flag"
 	"fmt"
 	"net"
+	"sync"
 )
 
 func must(err error) {
@@ -32,6 +33,29 @@ func serverToClient(conn, clientConn *net.UDPConn, clientAddr *net.UDPAddr) {
 	}
 }
 
+type proxy struct {
+	clientAddr *net.UDPAddr
+	serverConn *net.UDPConn
+}
+
+var (
+	mProxy sync.Mutex
+)
+
+func (p *proxy) run(toClient *net.UDPConn) {
+	buff := make([]byte, 2000)
+	for {
+		n, addr, err := p.serverConn.ReadFromUDP(buff)
+		must(err)
+		fmt.Printf("s->c: received %d bytes from %s\n", n, addr)
+		fmt.Printf("s->c: data: %q\n", string(buff[:n]))
+
+		n, err = toClient.WriteToUDP(buff[:n], p.clientAddr)
+		must(err)
+		fmt.Printf("s->c: sent %d bytes to %s\n", n, p.clientAddr)
+	}
+}
+
 func main() {
 	port := flag.Int("port", 7001, "port to listen")
 	target := flag.String("target", "localhost:7000", "target to proxy")
@@ -42,13 +66,7 @@ func main() {
 	must(err)
 	defer clientConn.Close()
 
-	c, err := net.Dial("udp", *target)
-	must(err)
-	defer c.Close()
-	fmt.Printf("connected to %s from %s\n", c.RemoteAddr(), c.LocalAddr())
-	serverConn := c.(*net.UDPConn)
-
-	serverStarted := false
+	proxyMap := make(map[string]*proxy)
 
 	// client -> server
 	buff := make([]byte, 2000)
@@ -57,17 +75,29 @@ func main() {
 		must(err)
 		fmt.Printf("received %d bytes from %s\n", n, addr)
 
-		n2, err := serverConn.Write(buff[:n])
+		mProxy.Lock()
+		px, ok := proxyMap[addr.String()]
+		if !ok {
+			px = &proxy{
+				clientAddr: addr,
+				serverConn: nil,
+			}
+			proxyMap[addr.String()] = px
+		}
+		mProxy.Unlock()
+
+		if px.serverConn == nil {
+			c, err := net.Dial("udp", *target)
+			must(err)
+			// defer c.Close()
+			fmt.Printf("connected to %s from %s\n", c.RemoteAddr(), c.LocalAddr())
+			px.serverConn = c.(*net.UDPConn)
+
+			go px.run(clientConn)
+		}
+
+		n, err = px.serverConn.Write(buff[:n])
 		must(err)
-		fmt.Printf("  sent %d bytes to %s\n", n2, serverConn.RemoteAddr())
-		if n != n2 {
-			panic("bytes mismatch")
-		}
-
-		if !serverStarted {
-			serverStarted = true
-			go serverToClient(serverConn, clientConn, addr)
-		}
+		fmt.Printf("sent %d bytes (%s => %s)\n", n, px.serverConn.LocalAddr(), px.serverConn.RemoteAddr())
 	}
-
 }
