@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -25,17 +26,21 @@ func main() {
 
 	uconn := conn.(*net.UDPConn)
 
-	msg := []byte(fmt.Sprintf("hello, from %d", os.Getpid()))
-	buff := make([]byte, 100)
+	msg0 := strings.Repeat(fmt.Sprintf("hello, from %d. ", os.Getpid()), 1000)
+	buff := make([]byte, 4000)
 
-	for {
-		time.Sleep(time.Second * 3)
-		conn.Write(msg)
+	for i := 100; i < 4000; i += 10 {
+		time.Sleep(time.Second * 1)
+		t0 := time.Now()
+		//conn.Write(msg)
+		fmt.Printf("sending %d bytes\n", i)
+		n, err := conn.Write([]byte(msg0[:i]))
+		fmt.Printf("sent %d bytes (err=%v)\n", n, err)
 
 		n, addr, err := uconn.ReadFromUDP(buff)
 		must(err)
 
-		fmt.Printf("received %d bytes from %s\n", n, addr)
+		fmt.Printf("received %d bytes from %s (d=%v)\n", n, addr, time.Since(t0))
 		fmt.Printf("data: %q\n", string(buff[:n]))
 	}
 }
