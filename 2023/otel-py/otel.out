@@ -1,0 +1,616 @@
+{
+    "name": "CREATE",
+    "context": {
+        "trace_id": "0x27a44f2d5aeee1b8ca1bf8716855ef89",
+        "span_id": "0x4ac02ec6c9d13644",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.912803Z",
+    "end_time": "2023-10-25T08:07:29.913229Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "CREATE TABLE lang(name, first_appeared)"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "INSERT",
+    "context": {
+        "trace_id": "0xabf409fb1be750720ec29d18ca8408f8",
+        "span_id": "0x4f8534229586a345",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.913259Z",
+    "end_time": "2023-10-25T08:07:29.913371Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "INSERT INTO lang VALUES(:name, :year)"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0x6355035ec8af96f89ad5ea9c27dcb323",
+        "span_id": "0x5bc7eadefea3ea06",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.913396Z",
+    "end_time": "2023-10-25T08:07:29.913486Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0xcc788e42f52725d222b4053397bfa67e",
+        "span_id": "0xa3a50d2186b723d8",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.913511Z",
+    "end_time": "2023-10-25T08:07:29.913581Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0x4ce1bb04f43710b96275039c7211f16b",
+        "span_id": "0x2ed6c6a70853c970",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.913602Z",
+    "end_time": "2023-10-25T08:07:29.913663Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0xdc7a655259f72823e2f10fa6a4b3e842",
+        "span_id": "0x750d0e05ff6f1c59",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.913681Z",
+    "end_time": "2023-10-25T08:07:29.913735Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0xc7f9890a466e950767e4aab2ca85850b",
+        "span_id": "0x299b1c2413acc4b5",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.913753Z",
+    "end_time": "2023-10-25T08:07:29.913817Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0x018b6da257a77a9f484b92752191030f",
+        "span_id": "0x330e69b920cc13e9",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.913844Z",
+    "end_time": "2023-10-25T08:07:29.913931Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0x8938da67913a1586116de150aa82b869",
+        "span_id": "0x39a51f22063cbf28",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.913951Z",
+    "end_time": "2023-10-25T08:07:29.914001Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0xc915c8fbf4080e009cf77710f159592b",
+        "span_id": "0x4dc2c1c0f91d34f7",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.914018Z",
+    "end_time": "2023-10-25T08:07:29.914064Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0x982e5bbb4c58a8e4e1d9b1abfe7b5291",
+        "span_id": "0x1b49fa6109eb3dd9",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.914080Z",
+    "end_time": "2023-10-25T08:07:29.914123Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0xa4db545978ad07698ebc62bcc5896516",
+        "span_id": "0x7ab594ec00ae8ef1",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.914138Z",
+    "end_time": "2023-10-25T08:07:29.914180Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0xd220857e7421377831f12749b12c15a8",
+        "span_id": "0x428efdf58f2974f2",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.914194Z",
+    "end_time": "2023-10-25T08:07:29.914235Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0x043ea7a805bcd7fbc01aa0be2bed9a97",
+        "span_id": "0x526e67148bc4484d",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.914249Z",
+    "end_time": "2023-10-25T08:07:29.914293Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0xf05ede90248036594ac8106b9add55cc",
+        "span_id": "0x4277e7d5be8c6da3",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.914306Z",
+    "end_time": "2023-10-25T08:07:29.914344Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0x5ab664bc5519cdfe577229c9959c0ed2",
+        "span_id": "0x895d3a20fec36842",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.914357Z",
+    "end_time": "2023-10-25T08:07:29.914395Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0x21c651f3658055458a7c6142c29da35e",
+        "span_id": "0x92a669876a4fa508",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.914408Z",
+    "end_time": "2023-10-25T08:07:29.914447Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0xc2582864d9be33e3bb1ebcd75738075a",
+        "span_id": "0x5dd1ead29b08308d",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.914460Z",
+    "end_time": "2023-10-25T08:07:29.914499Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0xaa9c8b31f82125a26a93df3ec5d3bdb6",
+        "span_id": "0x030ac3b4ac4bc10a",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.914512Z",
+    "end_time": "2023-10-25T08:07:29.914551Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0x3db1c5130715ca3c461557a8ca96e9a2",
+        "span_id": "0xe56dfa891645cf33",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.914564Z",
+    "end_time": "2023-10-25T08:07:29.914606Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0x386cc98e7514076f918228f887926e26",
+        "span_id": "0x5337c6f8dead5405",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.914618Z",
+    "end_time": "2023-10-25T08:07:29.914664Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}
+{
+    "name": "SELECT",
+    "context": {
+        "trace_id": "0x7ba3c210c2235ddedde2ca6b83c1c460",
+        "span_id": "0xf9a2cf019506f133",
+        "trace_state": "[]"
+    },
+    "kind": "SpanKind.CLIENT",
+    "parent_id": null,
+    "start_time": "2023-10-25T08:07:29.914677Z",
+    "end_time": "2023-10-25T08:07:29.914715Z",
+    "status": {
+        "status_code": "UNSET"
+    },
+    "attributes": {
+        "db.system": "sqlite",
+        "db.name": "",
+        "db.statement": "SELECT * FROM lang WHERE first_appeared = ?"
+    },
+    "events": [],
+    "links": [],
+    "resource": {
+        "attributes": {
+            "service.name": "sqlite3-otel"
+        },
+        "schema_url": ""
+    }
+}

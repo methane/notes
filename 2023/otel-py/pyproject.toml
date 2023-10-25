@@ -8,6 +8,9 @@ authors = [
 dependencies = [
     "opentelemetry-distro>=0.41b0",
     "ddtrace>=2.1.2",
+    "opentelemetry-instrumentation>=0.41b0",
+    "opentelemetry-instrumentation-sqlite3>=0.41b0",
+    "opentelemetry-exporter-otlp-proto-grpc>=1.20.0",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
