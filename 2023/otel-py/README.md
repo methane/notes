@@ -24,23 +24,21 @@ output:
 # no instrument
 $ time .venv/bin/python script.py
 
-real	0m1.075s
-user	0m1.024s
-sys	0m0.032s
+real    0m1.825s
+user    0m1.809s
+sys     0m0.016s
 
 # opentelemetry
-$ time .venv/bin/python script.py
 
-real	0m11.381s
-user	0m11.210s
-sys	0m0.268s
+real    0m27.088s
+user    0m26.912s
+sys     0m0.617s
 
 # ddtrace
-$ time .venv/bin/python script.py
 
-real	0m7.821s
-user	0m7.208s
-sys	0m0.590s
+real    0m25.780s
+user    0m24.402s
+sys     0m1.177s
 ```
 
 ## head based smaplign
