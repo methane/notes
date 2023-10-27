@@ -2,7 +2,7 @@ import sys
 import sqlite3
 
 
-def enable_otel(sample_rate: float = 1.0):
+def enable_otel():
     from opentelemetry import trace
     from opentelemetry.sdk.trace import TracerProvider
     from opentelemetry.sdk.trace.export import BatchSpanProcessor, ConsoleSpanExporter
@@ -64,5 +64,8 @@ enable_otel()
 
 # test()
 
-for _ in range(10000):
+# N = 100_000 # for profiling
+N =  10_000
+
+for _ in range(N):
    test()
