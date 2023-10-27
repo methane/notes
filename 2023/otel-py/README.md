@@ -4,6 +4,10 @@ measure overhead of instrumentations.
 
 ## text output
 
+ddtraceとotelをテキスト出力モードにして、計装時のオーバーヘッドを計測してみる。
+軽装対象はsqlite3
+
+
 ```py
 # see script.py ...
 
@@ -61,4 +65,25 @@ $ wc -l otel-sampled.out
 
 少し減ったけど、1/100にサンプリングした割にオーバーヘッドは半分にもなっていない。
 これだけしか効果がないなら tail based sampling だけでいいのでは。
+
+
+## events
+
+sqlite3への自動計装を止めて、spanではなくeventでタイミングを記録してみる。
+
+./otel-events.py  -- ソース
+./otel-events.out  -- 出力
+./otel-events-prof.svg -- py-spyで取得したプロファイル結果
+
+```
+$ time python otel-events.py
+
+real    0m6.132s
+user    0m6.139s
+sys     0m0.140s
+```
+
+まだ遅いが、1/100サンプリングよりは速くなった。
+
+
 
