@@ -2,29 +2,30 @@ import sys
 import sqlite3
 
 
-def enable_otel():
+def enable_otel(sample_rate:float = 1.0):
     from opentelemetry import trace
     from opentelemetry.sdk.trace import TracerProvider
     from opentelemetry.sdk.trace.export import BatchSpanProcessor, ConsoleSpanExporter
     from opentelemetry.sdk.resources import SERVICE_NAME, Resource
-    from opentelemetry.instrumentation.sqlite3 import SQLite3Instrumentor
+    from opentelemetry.sdk.trace.sampling import TraceIdRatioBased
+
+    sampler = TraceIdRatioBased(sample_rate)
 
     # Service name is required for most backends,
     # and although it's not necessary for console export,
     # it's good to set service name anyways.
     resource = Resource(attributes={SERVICE_NAME: "sqlite3-otel"})
-    provider = TracerProvider(resource=resource)
+
+    provider = TracerProvider(resource=resource, sampler=sampler)
     # processor = BatchSpanProcessor(ConsoleSpanExporter())  # to stdout
-    out = open("./otel-events.out", "w", encoding="utf-8")
+    out = open("./otel-event-sampled.out", "w", encoding="utf-8")
     processor = BatchSpanProcessor(ConsoleSpanExporter(out=out, formatter=lambda s: s.to_json(indent=2)))
     provider.add_span_processor(processor)
     trace.set_tracer_provider(provider)
 
-    # SQLite3Instrumentor().instrument()
-
 
 from opentelemetry import trace
-tracer = trace.get_tracer("otel-sampling")
+tracer = trace.get_tracer("otel-event-sampling")
 
 
 @tracer.start_as_current_span("test")
@@ -59,8 +60,9 @@ def test():
             current_span.add_event(f"selected {len(rows)} rows")
 
 
-# enable_ddtrace()
-enable_otel()
+rate = float(sys.argv[1])
+print(f"sampling {rate=}")
+enable_otel(rate)
 
 # test()
 
