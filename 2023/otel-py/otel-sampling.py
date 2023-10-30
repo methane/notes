@@ -7,11 +7,14 @@ def enable_otel(sample_rate: float = 1.0):
     from opentelemetry.sdk.trace import TracerProvider
     from opentelemetry.sdk.trace.export import BatchSpanProcessor, ConsoleSpanExporter
     from opentelemetry.sdk.resources import SERVICE_NAME, Resource
-    from opentelemetry.sdk.trace.sampling import TraceIdRatioBased
+    from opentelemetry.sdk.trace.sampling import ParentBasedTraceIdRatio
     from opentelemetry.instrumentation.sqlite3 import SQLite3Instrumentor
 
-    # 1/100 sampling
-    sampler = TraceIdRatioBased(sample_rate)
+    # ParentBasedTraceIdRatio: parentのsampleに従う。rootはratioでsamplingする。
+    # リバースプロキシ等上流でサンプリングしていて、それに完全に従いたい場合は ParentBased(ALWAYS_OFF)
+    # 上流でサンプリングをしてないので幾らかをドロップしたい場合は ParentBased() を使って、
+    #   root と remote_parent_sampled に ParentBasedTraceIdRatio を指定する。
+    sampler = ParentBasedTraceIdRatio(sample_rate)
 
     # Service name is required for most backends,
     # and although it's not necessary for console export,
@@ -19,9 +22,7 @@ def enable_otel(sample_rate: float = 1.0):
     resource = Resource(attributes={SERVICE_NAME: "sqlite3-otel"})
 
     provider = TracerProvider(resource=resource, sampler=sampler)
-    out = open("./otel-sampled.out", "w", encoding="utf-8")
-    # processor = BatchSpanProcessor(ConsoleSpanExporter())  # to stdout
-    processor = BatchSpanProcessor(ConsoleSpanExporter(out=out, formatter=lambda s: s.to_json(indent=2)))
+    processor = BatchSpanProcessor(ConsoleSpanExporter(formatter=lambda s: s.to_json(indent=2)))
     provider.add_span_processor(processor)
     trace.set_tracer_provider(provider)
 
@@ -56,12 +57,12 @@ def test():
             cur.fetchall()
 
 
-# enable_ddtrace()
 rate = float(sys.argv[1])
-print(f"sampling {rate=}")
+N = int(sys.argv[2]) if len(sys.argv) > 2 else 10_000
+# N = 100_000 # for profiling
+
+print(f"{N = }, sampling {rate = }", file=sys.stderr)
 enable_otel(rate)
 
-# test()
-
-for _ in range(10000):
+for _ in range(N):
    test()
