@@ -22,9 +22,9 @@ exporter = InMemorySpanExporter()
 processor = BatchSpanProcessor(exporter)
 provider.add_span_processor(processor)
 # ConsoleSpanExporterは1spanずつprintするので、バッチ化するメリットがない.
-# provider.add_span_processor(
-#     SimpleSpanProcessor(ConsoleSpanExporter())
-# )
+provider.add_span_processor(
+    SimpleSpanProcessor(ConsoleSpanExporter())
+)
 
 # Sets the global default tracer provider
 trace.set_tracer_provider(provider)
@@ -62,15 +62,18 @@ from google.protobuf import json_format
 encoded_spans = encode_spans(spans)
 # File Exporrt format は json lines なのでindent=Noneで1行にする
 json_spans = json_format.MessageToJson(encoded_spans, indent=None)
-print("json output:")
-print(json_spans)
+#print("json output:")
+#print(json_spans)
 
 ## compare timing
-# import timeit
-# timing_json = timeit.timeit(lambda: json_format.MessageToJson(encode_spans(spans)), number=1000)
-# timing_pb2  = timeit.timeit(lambda: encode_spans(spans).SerializeToString(), number=1000)
-# print(f"{timing_json=}, {timing_pb2=}")
-## timing_json=1.6855301250470802, timing_pb2=0.6994002499850467
+#import timeit
+#timing_encode = timeit.timeit(lambda: encode_spans(spans), number=1000)
+#print(f"{timing_encode=}")
+#timing_json = timeit.timeit(lambda: json_format.MessageToJson(encode_spans(spans)), number=1000)
+#timing_pb2  = timeit.timeit(lambda: encode_spans(spans).SerializeToString(), number=1000)
+#print(f"{timing_json=}, {timing_pb2=}")
+## timing_encode=0.7387497080489993
+## timing_json=1.8358257500221953, timing_pb2=0.7455355830024928
 
 ## compare size
 json_spans = json_spans.encode()
