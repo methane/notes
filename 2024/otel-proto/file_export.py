@@ -22,9 +22,9 @@ exporter = InMemorySpanExporter()
 processor = BatchSpanProcessor(exporter)
 provider.add_span_processor(processor)
 # ConsoleSpanExporterは1spanずつprintするので、バッチ化するメリットがない.
-provider.add_span_processor(
-    SimpleSpanProcessor(ConsoleSpanExporter())
-)
+#provider.add_span_processor(
+#    SimpleSpanProcessor(ConsoleSpanExporter())
+#)
 
 # Sets the global default tracer provider
 trace.set_tracer_provider(provider)
@@ -35,11 +35,10 @@ tracer = trace.get_tracer("my.tracer.name")
 def do_work():
     with tracer.start_as_current_span("span-name") as span:
         # do some work that 'span' will track
-        # print("doing some work...")
-        pass
+        span.add_event("doing some work...")
         # When the 'with' block goes out of scope, 'span' is closed for you
 
-N = 100  # sizeとtimingを測るときは100を使った
+N = 10  # sizeとtimingを測るときは100を使った
 for _ in range(N):
     do_work()
 
@@ -57,6 +56,10 @@ from opentelemetry.exporter.otlp.proto.common._internal.trace_encoder import (
     _encode_span
 )
 from google.protobuf import json_format
+
+# otlpのspan1つ分になるデータをJSON形式で確認する
+ConsoleSpanExporter().export([spans[0]])
+print(json_format.MessageToJson(_encode_span(spans[0])))
 
 ## spanをpb2, json化
 encoded_spans = encode_spans(spans)
