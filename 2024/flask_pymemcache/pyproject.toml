@@ -1,0 +1,21 @@
+[project]
+name = "flask-pymemcache"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Inada Naoki", email = "songofacandy@gmail.com" }
+]
+dependencies = [
+    "flask>=3.0.2",
+    "flask-pymemcache>=0.0.5",
+]
+requires-python = ">= 3.8"
+classifiers = ["Private :: Do Not Upload"]
+
+[project.scripts]
+hello = "flask_pymemcache:main"
+
+[tool.rye]
+managed = true
+virtual = true
+dev-dependencies = []
