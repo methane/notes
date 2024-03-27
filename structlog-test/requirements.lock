@@ -10,6 +10,10 @@
 -e file:.
 loguru==0.7.2
     # via structlog-test
+orjson==3.9.15
+    # via structlog-test
+py-spy==0.3.14
+    # via structlog-test
 python-json-logger==2.0.7
     # via structlog-test
 structlog==24.1.0
