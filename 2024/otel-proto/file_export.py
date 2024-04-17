@@ -29,6 +29,34 @@ provider.add_span_processor(processor)
 # Sets the global default tracer provider
 trace.set_tracer_provider(provider)
 
+
+import sqlite3
+from opentelemetry.instrumentation.sqlite3 import SQLite3Instrumentor
+SQLite3Instrumentor().instrument()
+
+def test_sqlite():
+    # https://docs.python.org/3/library/sqlite3.html#how-to-use-placeholders-to-bind-values-in-sql-queries
+    con = sqlite3.connect(":memory:")
+    cur = con.cursor()
+    cur.execute("CREATE TABLE lang(name, first_appeared)")
+
+    # This is the named style used with executemany():
+    data = (
+        {"name": "C", "year": 1972},
+        {"name": "Fortran", "year": 1957},
+        {"name": "Python", "year": 1991},
+        {"name": "Go", "year": 2009},
+    )
+    cur.executemany("INSERT INTO lang VALUES(:name, :year)", data)
+
+    for _ in range(5):
+        for y in [1972, 1957, 1991, 2009]:
+            # This is the qmark style used in a SELECT query:
+            params = (y,)
+            cur.execute("SELECT * FROM lang WHERE first_appeared = ?", params)
+            cur.fetchall()
+
+
 # Creates a tracer from the global tracer provider
 tracer = trace.get_tracer("my.tracer.name")
 
@@ -38,9 +66,10 @@ def do_work():
         span.add_event("doing some work...")
         # When the 'with' block goes out of scope, 'span' is closed for you
 
-N = 10  # sizeとtimingを測るときは100を使った
+N = 1  # sizeとtimingを測るときは100を使った
 for _ in range(N):
-    do_work()
+    #do_work()
+    test_sqlite()
 
 processor.force_flush()
 spans = exporter.get_finished_spans()
@@ -64,9 +93,9 @@ print(json_format.MessageToJson(_encode_span(spans[0])))
 ## spanをpb2, json化
 encoded_spans = encode_spans(spans)
 # File Exporrt format は json lines なのでindent=Noneで1行にする
-json_spans = json_format.MessageToJson(encoded_spans, indent=None)
-#print("json output:")
-#print(json_spans)
+json_spans = json_format.MessageToJson(encoded_spans, indent=1)
+print("json output:")
+print(json_spans)
 
 ## compare timing
 #import timeit
