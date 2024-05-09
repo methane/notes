@@ -12,3 +12,5 @@ psutil==5.9.8
     # via pyperf
 pyperf==2.6.3
     # via xorbytes
+tornado==6.4
+    # via xorbytes
