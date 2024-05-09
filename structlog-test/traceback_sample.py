@@ -10,8 +10,11 @@ structlog.configure(
 
 logger = structlog.get_logger()
 
-try:
+def foo():
     1/0
+
+try:
+    foo()
 except:
     logger.error("Does not print the exception")
     logger.exception("Prints the exception")
