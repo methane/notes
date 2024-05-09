@@ -12,7 +12,7 @@ def xor_bytes_generator(a, b):
 
 def xor_bytes_via_int(a, b):
     if len(a) != len(b):
-        return ValueError(f"a and b must have same length; {len(a)=} {len(b)=}")
+        raise ValueError(f"a and b must have same length; {len(a)=} {len(b)=}")
     aa = int.from_bytes(a)
     bb = int.from_bytes(b)
     return (aa ^ bb).to_bytes(len(a))
