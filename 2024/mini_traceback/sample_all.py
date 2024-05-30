@@ -6,6 +6,7 @@ import json
 import pathlib
 import minitraceback
 import sqlalchemy
+import contextlib
 
 import sub
 
@@ -68,6 +69,13 @@ def format_exception_short(exc: BaseException, *, maxfilenamelen=None, limit=Non
     return "".join(lines)
 
 
+@contextlib.contextmanager
+def codeblock():
+    print("\n```")
+    yield
+    print("```\n")
+
+
 def main():
     try:
         engine = sqlalchemy.create_engine("sqlite:////bin/hoge.db")
@@ -76,23 +84,30 @@ def main():
     except Exception as e:
         tb = e.__traceback__
 
-        print("# stdlib traceback")
-        s = "".join(traceback.format_exception(e, chain=True))
-        print(s)
+        print("## stdlib traceback")
+        with codeblock():
+            s = "".join(traceback.format_exception(e, chain=False))
+            print(s)
 
-        if py:
-            print("# py.code traceback")
+        print("## py.code traceback")
+        with codeblock():
             exc_info = py.code.ExceptionInfo()
             print(f"traceback:\n{exc_info.getrepr(showlocals=False, style='short')}")
-            print()
 
-        print("# minitrace")
-        minitraceback.print_exception(e)
+        print("## minitrace")
+        with codeblock():
+            s = minitraceback.format_exception(e)
+            # minitraceback needs "\n".join(), instead of "".join() in traceback module
+            print("\n".join(s))
+
+        print("## minitrace in json")
         print()
-
-        print("\n# minitrace in json")
-        print('"exception":', minitraceback.format_exception_only(e))
-        print('"stacktrace":', json.dumps(minitraceback.format_tb(tb)))
+        print("exception:")
+        with codeblock():
+            print(json.dumps(minitraceback.format_exception_only(e)))
+        print("stacktrace:")
+        with codeblock():
+            print(json.dumps(minitraceback.format_tb(tb)))
 
 
 main()
