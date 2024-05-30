@@ -87,12 +87,12 @@ def main():
             print()
 
         print("# minitrace")
-        print("\n".join(minitraceback.format_exception(e)))
+        minitraceback.print_exception(e)
+        print()
 
         print("\n# minitrace in json")
-        frames = minitraceback.extract_tb(tb)
         print('"exception":', minitraceback.format_exception_only(e))
-        print('"stacktrace":', json.dumps(minitraceback.format_frames(frames)))
+        print('"stacktrace":', json.dumps(minitraceback.format_tb(tb)))
 
 
 main()
