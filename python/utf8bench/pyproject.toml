@@ -3,9 +3,16 @@ name = "utf8bench"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = []
+requires-python = ">=3.8"
+dependencies = [
+    "pyperf>=2.8.0",
+]
 
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+ext-modules = [
+  {name = "utf8bench.ext", sources = ["src/utf8bench/ext.cpp"], include-dirs = ["src/utf8bench/"]},
+]
