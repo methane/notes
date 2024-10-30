@@ -45,7 +45,7 @@ load_unaligned(const unsigned char *p, size_t size)
         unsigned char b[8];
     } t;
     t.u = 0;
-    switch (size & 0x7) {
+    switch (size) {
         case 8:
             t.b[7] = p[7];
         // fall through
@@ -160,7 +160,12 @@ first_nonascii2(const unsigned char *start, const unsigned char *end)
         const unsigned char *p2 = _Py_ALIGN_UP(p, ALIGNOF_SIZE_T);
         // printf("unaligned access: %d\n", (int)(p2-p));
         if (p < p2) {
+#if defined(_M_AMD64) || defined(_M_IX86) || defined(__x86_64__) || defined(__i386__)
+            // does arm64 guarantee unaligned access?
+            size_t u = *(const size_t*)p & ASCII_CHAR_MASK;
+#else
             size_t u = load_unaligned(p, p2 - p) & ASCII_CHAR_MASK;
+#endif
             if (u) {
                 return p - start + (ctz(u) - 7) / 8;
             }
@@ -195,11 +200,18 @@ first_nonascii3(const unsigned char *start, const unsigned char *end)
 
     if (end - start >= SIZEOF_SIZE_T) {
         const unsigned char *e = _Py_ALIGN_UP(p, ALIGNOF_SIZE_T);
-        while (p < e) {
-            if (*p & 0x80) {
-                return p - start;
+        // printf("unaligned access: %d\n", (int)(p2-p));
+        if (p < e) {
+#if defined(_M_AMD64) || defined(_M_IX86) || defined(__x86_64__) || defined(__i386__)
+            // does arm64 guarantee unaligned access?
+            size_t u = *(const size_t*)p & ASCII_CHAR_MASK;
+#else
+            size_t u = load_unaligned(p, p2 - p) & ASCII_CHAR_MASK;
+#endif
+            if (u) {
+                return p - start + (ctz(u) - 7) / 8;
             }
-            p++;
+            p = e;
         }
         e = end - SIZEOF_SIZE_T;
         while (p <= e) {
