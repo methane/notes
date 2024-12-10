@@ -36,7 +36,7 @@ first_nonascii0(const unsigned char *start, const unsigned char *end)
 
 // load p[0]..p[size-1] as a little-endian size_t
 // without unaligned access nor read ahead.
-size_t
+static inline size_t
 load_unaligned_union(const unsigned char *p, size_t size)
 {
     union {
@@ -76,7 +76,7 @@ load_unaligned_union(const unsigned char *p, size_t size)
     return t.u;
 }
 
-size_t
+static inline size_t
 load_unaligned_shift(const unsigned char *p, size_t size)
 {
     size_t u = 0;
@@ -112,7 +112,7 @@ load_unaligned_shift(const unsigned char *p, size_t size)
     return u;
 }
 
-size_t
+static inline size_t
 load_unaligned_memcpy(const unsigned char *p, size_t size)
 {
     size_t u = 0;
@@ -245,10 +245,13 @@ first_nonascii3(const unsigned char *start, const unsigned char *end)
         }
     }
 
-    //size_t u = load_unaligned_memcpy(p, end-p);
+#if 1
+    size_t u = load_unaligned_memcpy(p, end-p);
+#else
     size_t u=0;
     size_t s = end-p > 8 ? 8 : end-p;
     memcpy(&u, p, s);
+#endif
     u &= ASCII_CHAR_MASK;
     if (u) {
         return p - start + (ctz(u) - 7) / 8;
