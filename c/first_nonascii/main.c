@@ -15,6 +15,8 @@ ssize_t
 first_nonascii2(const unsigned char *start, const unsigned char *end);
 ssize_t
 first_nonascii3(const unsigned char *start, const unsigned char *end);
+ssize_t
+first_nonascii4(const unsigned char *start, const unsigned char *end);
 
 
 void timespec_diff(struct timespec *start, struct timespec *stop,
@@ -53,7 +55,7 @@ int main()
 {
     //longtest();
 
-    const char *s = "abcdeabcdeabcde\xc0";
+    const char *s = "abcdeabcdeabcdeabcde\xc0";
     const char *end = s + strlen(s);
 
     long long ll;
@@ -63,7 +65,7 @@ int main()
 #if 1
     clock_gettime(CLOCK_MONOTONIC, &start);
     for (ll = 0; ll < cnt; ll++) {
-        first_nonascii0((const unsigned char*)s+(ll%12), (const unsigned char*)end);
+        first_nonascii0((const unsigned char*)s+(ll%8), (const unsigned char*)end);
     }
     clock_gettime(CLOCK_MONOTONIC, &stop);
     timespec_diff(&start, &stop, &diff);
@@ -72,7 +74,7 @@ int main()
 
     clock_gettime(CLOCK_MONOTONIC, &start);
     for (ll = 0; ll < cnt; ll++) {
-        first_nonascii1((const unsigned char*)s+(ll%12), (const unsigned char*)end);
+        first_nonascii1((const unsigned char*)s+(ll%8), (const unsigned char*)end);
     }
     clock_gettime(CLOCK_MONOTONIC, &stop);
     timespec_diff(&start, &stop, &diff);
@@ -81,7 +83,7 @@ int main()
 #if 1
     clock_gettime(CLOCK_MONOTONIC, &start);
     for (ll = 0; ll < cnt; ll++) {
-        first_nonascii2((const unsigned char*)s+(ll%12), (const unsigned char*)end);
+        first_nonascii2((const unsigned char*)s+(ll%8), (const unsigned char*)end);
     }
     clock_gettime(CLOCK_MONOTONIC, &stop);
     timespec_diff(&start, &stop, &diff);
@@ -91,12 +93,23 @@ int main()
 #if 1
     clock_gettime(CLOCK_MONOTONIC, &start);
     for (ll = 0; ll < cnt; ll++) {
-        first_nonascii3((const unsigned char*)s+(ll%12), (const unsigned char*)end);
+        first_nonascii3((const unsigned char*)s+(ll%8), (const unsigned char*)end);
     }
     clock_gettime(CLOCK_MONOTONIC, &stop);
     timespec_diff(&start, &stop, &diff);
     printf("3. %ld.%09ld ns\n", diff.tv_sec, diff.tv_nsec);
 #endif
+
+#if 1
+    clock_gettime(CLOCK_MONOTONIC, &start);
+    for (ll = 0; ll < cnt; ll++) {
+        first_nonascii4((const unsigned char*)s+(ll%8), (const unsigned char*)end);
+    }
+    clock_gettime(CLOCK_MONOTONIC, &stop);
+    timespec_diff(&start, &stop, &diff);
+    printf("4. %ld.%09ld ns\n", diff.tv_sec, diff.tv_nsec);
+#endif
+
     return 0;
 }
 
