@@ -7,16 +7,12 @@
 #include <memory.h>
 #include <stdlib.h>
 
-ssize_t
-first_nonascii0(const unsigned char *start, const unsigned char *end);
-ssize_t
-first_nonascii1(const unsigned char *start, const unsigned char *end);
-ssize_t
-first_nonascii2(const unsigned char *start, const unsigned char *end);
-ssize_t
-first_nonascii3(const unsigned char *start, const unsigned char *end);
-ssize_t
-first_nonascii4(const unsigned char *start, const unsigned char *end);
+ssize_t first_nonascii0(const unsigned char *start, const unsigned char *end);
+ssize_t first_nonascii1(const unsigned char *start, const unsigned char *end);
+ssize_t first_nonascii2(const unsigned char *start, const unsigned char *end);
+ssize_t first_nonascii3(const unsigned char *start, const unsigned char *end);
+ssize_t first_nonascii4(const unsigned char *start, const unsigned char *end);
+ssize_t first_nonascii5(const unsigned char *start, const unsigned char *end);
 
 
 void timespec_diff(struct timespec *start, struct timespec *stop,
@@ -108,6 +104,16 @@ int main()
     clock_gettime(CLOCK_MONOTONIC, &stop);
     timespec_diff(&start, &stop, &diff);
     printf("4. %ld.%09ld ns\n", diff.tv_sec, diff.tv_nsec);
+#endif
+
+#if 1
+    clock_gettime(CLOCK_MONOTONIC, &start);
+    for (ll = 0; ll < cnt; ll++) {
+        first_nonascii5((const unsigned char*)s+(ll%8), (const unsigned char*)end);
+    }
+    clock_gettime(CLOCK_MONOTONIC, &stop);
+    timespec_diff(&start, &stop, &diff);
+    printf("5. %ld.%09ld ns\n", diff.tv_sec, diff.tv_nsec);
 #endif
 
     return 0;

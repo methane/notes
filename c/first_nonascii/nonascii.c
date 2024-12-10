@@ -220,7 +220,7 @@ first_nonascii2(const unsigned char *start, const unsigned char *end)
     return end - start;
 }
 
-// use load_unaligned
+// use load_unaligned_memcpy
 ssize_t
 first_nonascii3(const unsigned char *start, const unsigned char *end)
 {
@@ -245,9 +245,10 @@ first_nonascii3(const unsigned char *start, const unsigned char *end)
         }
     }
 
-    size_t u = load_unaligned_memcpy(p, end-p);
-    //size_t s = end-p > 8 ? 8 : end-p;
-    //memcpy(&u, p, s);
+    //size_t u = load_unaligned_memcpy(p, end-p);
+    size_t u=0;
+    size_t s = end-p > 8 ? 8 : end-p;
+    memcpy(&u, p, s);
     u &= ASCII_CHAR_MASK;
     if (u) {
         return p - start + (ctz(u) - 7) / 8;
@@ -256,9 +257,43 @@ first_nonascii3(const unsigned char *start, const unsigned char *end)
     return end - start;
 }
 
-// uses over the end read access.
+// load_unaligned_shift
 ssize_t
 first_nonascii4(const unsigned char *start, const unsigned char *end)
+{
+    const unsigned char *p = start;
+
+    if (end - start >= SIZEOF_SIZE_T) {
+        size_t u;
+        memcpy(&u, p, sizeof(size_t));
+        u &= ASCII_CHAR_MASK;
+        if (u) {
+            return (ctz(u) - 7) / 8;
+        }
+        p = _Py_ALIGN_DOWN((p+SIZEOF_SIZE_T), SIZEOF_SIZE_T);
+
+        const unsigned char *e = end - SIZEOF_SIZE_T;
+        while (p <= e) {
+            size_t u = (*(const size_t *)p) & ASCII_CHAR_MASK;
+            if (u) {
+                return p - start + (ctz(u) - 7) / 8;
+            }
+            p += SIZEOF_SIZE_T;
+        }
+    }
+
+    size_t u = load_unaligned_shift(p, end-p);
+    u &= ASCII_CHAR_MASK;
+    if (u) {
+        return p - start + (ctz(u) - 7) / 8;
+    }
+    return end - start;
+}
+
+
+// load_unaligned_union
+ssize_t
+first_nonascii5(const unsigned char *start, const unsigned char *end)
 {
     const unsigned char *p = start;
 
