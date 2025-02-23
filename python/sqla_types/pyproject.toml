@@ -1,0 +1,10 @@
+[project]
+name = "sqla-types"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mypy>=1.15.0",
+    "sqlalchemy>=2.0.38",
+]
