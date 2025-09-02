@@ -1,0 +1,184 @@
+*** Starting uWSGI 2.0.30 (64bit) on [Tue Sep  2 12:30:25 2025] ***
+compiled with version: Apple LLVM 17.0.0 (clang-1700.0.13.5) on 02 September 2025 02:59:07
+os: Darwin-24.6.0 Darwin Kernel Version 24.6.0: Mon Jul 14 11:30:29 PDT 2025; root:xnu-11417.140.69~1/RELEASE_ARM64_T6000
+nodename: PC-4524.local
+machine: arm64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /Users/inada-n/notes/python/uwsgi_threadpool
+writing pidfile to uwsgi.pid
+detected binary path: /Users/inada-n/notes/python/uwsgi_threadpool/.venv/bin/uwsgi
+your processes number limit is 5333
+your memory page size is 16384 bytes
+detected max file descriptor number: 256
+lock engine: OSX spinlocks
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :4321 fd 3
+Python version: 3.13.7 (main, Aug 18 2025, 19:02:43) [Clang 20.1.4 ]
+Python main interpreter initialized at 0x106afb140
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 208384 bytes (203 KB) for 4 cores
+*** Operational MODE: threaded ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 45903)
+spawned uWSGI worker 1 (pid: 45905, cores: 4)
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x106afb140 pid: 45905 (default app)
+starting 0
+[pid: 45905|app: 0|req: 1/1] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:25 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 0)
+starting 1
+[pid: 45905|app: 0|req: 2/2] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:25 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (2 switches on core 1)
+starting 2
+[pid: 45905|app: 0|req: 3/3] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (2 switches on core 2)
+starting 3
+[pid: 45905|app: 0|req: 4/4] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (2 switches on core 3)
+starting 4
+[pid: 45905|app: 0|req: 5/5] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (2 switches on core 0)
+starting 5
+[pid: 45905|app: 0|req: 6/6] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 1)
+starting 6
+[pid: 45905|app: 0|req: 7/7] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 2)
+starting 7
+[pid: 45905|app: 0|req: 8/8] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 3)
+starting 8
+[pid: 45905|app: 0|req: 9/9] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 0)
+starting 9
+[pid: 45905|app: 0|req: 10/10] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (2 switches on core 1)
+starting 10
+[pid: 45905|app: 0|req: 11/11] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 2)
+starting 11
+[pid: 45905|app: 0|req: 12/12] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (2 switches on core 3)
+starting 12
+[pid: 45905|app: 0|req: 13/13] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 0)
+starting 13
+[pid: 45905|app: 0|req: 14/14] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 1)
+starting 14
+[pid: 45905|app: 0|req: 15/15] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (2 switches on core 2)
+starting 15
+[pid: 45905|app: 0|req: 16/16] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (2 switches on core 3)
+[pid: 45905|app: 0|req: 17/17] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 0)
+[pid: 45905|app: 0|req: 18/18] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 1)
+[pid: 45905|app: 0|req: 19/19] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 2)
+[pid: 45905|app: 0|req: 20/20] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (2 switches on core 3)
+[pid: 45905|app: 0|req: 21/21] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (2 switches on core 0)
+[pid: 45905|app: 0|req: 22/22] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 1)
+[pid: 45905|app: 0|req: 23/23] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (2 switches on core 2)
+[pid: 45905|app: 0|req: 24/24] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 3)
+[pid: 45905|app: 0|req: 25/25] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 0)
+[pid: 45905|app: 0|req: 26/26] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 1)
+[pid: 45905|app: 0|req: 27/27] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 2)
+[pid: 45905|app: 0|req: 28/28] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 3)
+[pid: 45905|app: 0|req: 29/29] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 0)
+[pid: 45905|app: 0|req: 30/30] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 1)
+[pid: 45905|app: 0|req: 31/31] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 2)
+[pid: 45905|app: 0|req: 32/32] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 3)
+[pid: 45905|app: 0|req: 33/33] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 0)
+[pid: 45905|app: 0|req: 34/34] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 1)
+[pid: 45905|app: 0|req: 35/35] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 2)
+[pid: 45905|app: 0|req: 36/36] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 3)
+[pid: 45905|app: 0|req: 37/37] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (2 switches on core 0)
+[pid: 45905|app: 0|req: 38/38] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 1)
+[pid: 45905|app: 0|req: 39/39] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (2 switches on core 2)
+[pid: 45905|app: 0|req: 40/40] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 3)
+[pid: 45905|app: 0|req: 41/41] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 0)
+[pid: 45905|app: 0|req: 42/42] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 1)
+[pid: 45905|app: 0|req: 43/43] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 2)
+[pid: 45905|app: 0|req: 44/44] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 3)
+[pid: 45905|app: 0|req: 45/45] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 0)
+[pid: 45905|app: 0|req: 46/46] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 1)
+[pid: 45905|app: 0|req: 47/47] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 2)
+[pid: 45905|app: 0|req: 48/48] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 3)
+[pid: 45905|app: 0|req: 49/49] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 0)
+[pid: 45905|app: 0|req: 50/50] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (2 switches on core 1)
+[pid: 45905|app: 0|req: 51/51] 127.0.0.1 () {24 vars in 254 bytes} [Tue Sep  2 12:30:26 2025] GET / => generated 12 bytes in 0 msecs (HTTP/1.1 200) 1 headers in 60 bytes (1 switches on core 2)
+SIGINT/SIGTERM received...killing workers...
+ending 0
+starting 16
+ending 1
+starting 17
+ending 2
+starting 18
+ending 3
+starting 19
+ending 4
+starting 20
+ending 5
+starting 21
+ending 6
+starting 22
+ending 7
+starting 23
+ending 8
+starting 24
+ending 9
+starting 25
+ending 10
+starting 26
+ending 11
+starting 27
+ending 12
+starting 28
+ending 13
+starting 29
+ending 14
+starting 30
+ending 15
+starting 31
+ending 16
+starting 32
+ending 17
+starting 33
+ending 18
+starting 34
+ending 19
+starting 35
+ending 20
+starting 36
+ending 21
+starting 37
+ending 22
+starting 38
+ending 23
+starting 39
+ending 24
+starting 40
+ending 25
+starting 41
+ending 26
+starting 42
+ending 27
+starting 43
+ending 28
+starting 44
+ending 29
+starting 45
+ending 30
+starting 46
+ending 31
+starting 47
+ending 32
+starting 48
+ending 33
+starting 49
+ending 34
+starting 50
+ending 35
+ending 36
+ending 37
+ending 38
+ending 39
+ending 40
+ending 41
+ending 42
+ending 43
+ending 44
+ending 45
+ending 46
+ending 47
+ending 48
+ending 49
+ending 50
+worker 1 buried after 20 seconds
+goodbye to uWSGI.
