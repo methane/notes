@@ -14,4 +14,6 @@ openssl req \
   -subj "/CN=localhost" \
   -addext "subjectAltName=DNS:localhost,IP:127.0.0.1"
 
-echo "Generated: certs/localhost.crt, certs/localhost.key"
+cp certs/localhost.crt certs/ca.pem
+
+echo "Generated: certs/localhost.crt, certs/localhost.key, certs/ca.pem"

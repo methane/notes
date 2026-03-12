@@ -33,3 +33,15 @@ curl --http2 -k -I https://localhost:8443
 ## 補足
 
 自己署名証明書を使っているため、ブラウザで警告が出ます。ローカル検証用途として想定しています。
+
+## Python requests からのアクセス
+
+`certs/ca.pem` を検証用CAとして使います。
+
+```python
+import requests
+
+r = requests.get("https://localhost:8443", verify="certs/ca.pem")
+print(r.status_code)
+print(r.text)
+```

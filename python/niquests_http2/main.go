@@ -1,31 +1,27 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
+	"time"
+	"math/rand"
 )
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	_, _ = fmt.Fprintf(w, `<!doctype html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Go HTTP/2 + TLS</title>
-</head>
-<body>
-  <h1>Go HTTP/2 + TLS で動作中</h1>
-  <p>Protocol: %s</p>
-  <p>Path: %s</p>
-</body>
-</html>`, r.Proto, r.URL.Path)
+	time.Sleep(time.Duration(rand.Intn(1000)) * time.Millisecond)
+	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+	w.Write([]byte("Hello, World\n"))
+}
+
+func postHandler(w http.ResponseWriter, r *http.Request) {
+	time.Sleep(time.Duration(rand.Intn(1000)) * time.Millisecond)
+	w.WriteHeader(http.StatusCreated)
 }
 
 func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", rootHandler)
+	mux.HandleFunc("/post201", postHandler)
 
 	addr := ":8443"
 	server := &http.Server{
