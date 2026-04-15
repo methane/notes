@@ -1,0 +1,1 @@
+Auroraのfailover対応のためのテストコード
